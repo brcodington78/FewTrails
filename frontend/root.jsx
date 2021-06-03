@@ -13,3 +13,5 @@ const Root = ({ store }) => (
 );
 
 export default Root;
+
+console.log('heeyyy')
