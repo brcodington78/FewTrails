@@ -1,0 +1,77 @@
+header {
+    height: 60px;
+}
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.other-nav-options {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.explore {
+    padding-left: 50px;
+    padding-right: 15px;
+    padding-top: 20px;
+}
+
+.plan {
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.history {
+    padding-top: 20px;
+    padding-left: 15px;
+    
+}
+
+.center-nav {
+    position: relative;
+    bottom: 50px;
+}
+
+.nav-buttons {
+    position: relative;
+    right: 10px;
+}
+
+.login-button {
+    background-color: white;
+    color: #01c5c4;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    position: relative;
+    top: 10px;
+    border-radius: 8px;
+    font-family: sans-serif;
+    border: 2px solid #01c5c4;
+    font-weight: bold;
+}
+
+.signup-button {
+    background-color: #01c5c4;
+    color: white;
+    padding: 10px 13px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    position: relative;
+    top: 10px;
+    right: 8px;
+    border-radius: 8px;
+    font-family: sans-serif;
+    border: 2px solid #01c5c4;
+    font-weight: bold;
+}

@@ -1,0 +1,23 @@
+
+.form-container {
+    height: 1000px;
+    background-image: url(https://cdn.pixabay.com/photo/2015/10/12/15/01/mountain-984083_1280.jpg);
+}
+
+
+
+
+.user-auth-forms {
+    display: flex;
+    position: relative;
+    top: 40px;
+    height: 400px;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.user-form-error {
+    color: #fccb7c;
+}
