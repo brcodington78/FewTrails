@@ -39,6 +39,7 @@ class SessionForm extends React.Component {
 
     
     render() {
+        console.log(this.props.errors, 'error logger')
         let formTitle;
         if (this.props.formType === 'signup') {
             formTitle = (
