@@ -11,9 +11,9 @@ export const receiveCurrentUser = currentUser => ({
     currentUser
 });
 
-export const receiveErrors = error => ({
+export const receiveErrors = errors => ({
   type: RECEIVE_ERRORS,
-  error
+  errors
 })
 
 export const logoutCurrentUser = () => ({
