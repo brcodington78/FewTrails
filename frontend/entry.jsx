@@ -9,7 +9,7 @@ import {createUser} from './actions/user_actions'
 
 document.addEventListener('DOMContentLoaded', () => {
     let preloadedState = undefined;
-    console.log(window.currentUser)
+    
     if (window.currentUser ) {
         preloadedState = {session: {id: window.currentUser.id},
         entities: {

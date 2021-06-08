@@ -5,7 +5,7 @@ import { logout } from '../actions/session_actions'
 
 const mSTP = ({ session, entities: { users }}) => {
     
-    console.log(session,'session log')
+    
     return ({
         
         currentUser: users[session.id]

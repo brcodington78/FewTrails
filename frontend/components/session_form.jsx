@@ -1,5 +1,6 @@
 import React from 'react';
 import {CLEAR_ERRORS, clearErrors} from '../actions/session_actions'
+import {Link} from 'react-router-dom'
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -16,7 +17,7 @@ class SessionForm extends React.Component {
                 password: ''
             }
         }
-        console.log(this.props, 'session_form log')
+        
         
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -39,14 +40,21 @@ class SessionForm extends React.Component {
 
     
     render() {
-        let formTitle;
+        let switchLink;
+        let formHeader;
         if (this.props.formType === 'signup') {
-            formTitle = (
-                <h2>Create a new account!</h2>
+            formHeader = (
+                <h1>Create a new account!</h1>
+            )
+            switchLink = (
+                <Link to="/login">Already have an acount? Log in</Link>
             )
         } else if (this.props.formType === 'login') {
-            formTitle = (
-                <h2>Login to find your adventure!</h2>
+            formHeader = (
+                <h1>Login to find your adventure!</h1>
+            )
+            switchLink = (
+                <Link to="/signup">Don't have an acount? Sign up!</Link>
             )
         }
 
@@ -55,7 +63,7 @@ class SessionForm extends React.Component {
         if (this.props.formType === 'signup') {
             name_elements = (
                 <label>Name:
-                    <input type='text' value={this.state.name} onChange={(e) => this.update(e, 'name')}/>
+                    <input className='user-form-input' type='text' value={this.state.name} onChange={(e) => this.update(e, 'name')}/>
                 </label>
             )
         }
@@ -63,15 +71,16 @@ class SessionForm extends React.Component {
         return(
             <div className='form-container'>
                 <form className='user-auth-forms' onSubmit={this.handleSubmit}>
-                    {formTitle}
+                    {formHeader}
                     {name_elements}
                     <label>Email:
-                        <input type='text' value={this.state.email} onChange={(e) => this.update(e,'email')} />
+                        <input className='user-form-input' type='text' value={this.state.email} onChange={(e) => this.update(e,'email')} />
                     </label>
                     <label>Password:
-                        <input type='password' value={this.state.password} onChange={(e) => this.update(e,'password')}/>
+                        <input className='user-form-input' type='password' value={this.state.password} onChange={(e) => this.update(e,'password')}/>
                     </label>
                     <button onClick={this.handleSubmit}>Submit</button>
+                    {switchLink}
                     <ul>
                         {this.props.errors.map((error, i) => (
                         <li className="user-form-error" key={`error-${i}`}>
