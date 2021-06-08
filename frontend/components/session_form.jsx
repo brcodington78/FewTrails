@@ -74,10 +74,10 @@ class SessionForm extends React.Component {
             name_elements = (
                 <>
                     <label>First Name:
-                        <input className='user-form-input' type='text' value={this.state.first_name} onChange={(e) => this.update(e, 'first_name')}/>
+                        <input className='user-form-input' placeholder='First Name' type='text'  value={this.state.first_name} onChange={(e) => this.update(e, 'first_name')}/>
                     </label>
                     <label>Last Name:
-                        <input className='user-form-input' type='text' value={this.state.last_name} onChange={(e) => this.update(e, 'last_name')}/>
+                        <input className='user-form-input'  placeholder='Last Name' type='text' value={this.state.last_name} onChange={(e) => this.update(e, 'last_name')}/>
                     </label>
                 </>
             )
@@ -90,10 +90,10 @@ class SessionForm extends React.Component {
                     {formHeader}
                     {name_elements}
                     <label>Email:
-                        <input className='user-form-input' type='text' value={this.state.email} onChange={(e) => this.update(e,'email')} />
+                        <input className='user-form-input'  placeholder='Email' type='text' value={this.state.email} onChange={(e) => this.update(e,'email')} />
                     </label>
                     <label>Password:
-                        <input className='user-form-input' type='password' value={this.state.password} onChange={(e) => this.update(e,'password')}/>
+                        <input className='user-form-input'  placeholder='Password' type='password' value={this.state.password} onChange={(e) => this.update(e,'password')}/>
                     </label>
                     <button onClick={this.handleSubmit}>Submit</button>
                     {demoButton}
