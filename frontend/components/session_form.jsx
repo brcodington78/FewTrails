@@ -1,12 +1,14 @@
 import React from 'react';
 import {CLEAR_ERRORS, clearErrors} from '../actions/session_actions'
+import {Link} from 'react-router-dom'
 
 class SessionForm extends React.Component {
     constructor(props) {
         super(props)
         if (this.props.formType === "signup"){
             this.state = {
-                name: '',
+                first_name: '',
+                last_name: '',
                 email: '',
                 password: ''
             }
@@ -16,10 +18,15 @@ class SessionForm extends React.Component {
                 password: ''
             }
         }
-        console.log(this.props, 'session_form log')
-        
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.demoUser = this.demoUser.bind(this);
     }
+
+    demoUser() {
+        
+        let demoUser = { email: "jdoe@yahoo.com", password: "123456" };
+        this.props.processForm(demoUser)
+      }
     
     componentWillUnmount() {
         dispatch(clearErrors())
@@ -39,15 +46,28 @@ class SessionForm extends React.Component {
 
     
     render() {
-        console.log(this.props.errors, 'error logger')
-        let formTitle;
+
+
+        let switchLink;
+        let formHeader;
+        let demoButton;
+
         if (this.props.formType === 'signup') {
-            formTitle = (
-                <h2>Create a new account!</h2>
+            formHeader = (
+                <h1>Create a new account!</h1>
+            )
+            switchLink = (
+                <Link to="/login">Already have an acount? Log in</Link>
             )
         } else if (this.props.formType === 'login') {
-            formTitle = (
-                <h2>Login to find your adventure!</h2>
+            formHeader = (
+                <h1>Login to find your adventure!</h1>
+            )
+            switchLink = (
+                <Link to="/signup">Don't have an acount? Sign up!</Link>
+            )
+            demoButton = (
+                <button onClick={this.demoUser}>Demo Login</button>
             )
         }
 
@@ -55,24 +75,32 @@ class SessionForm extends React.Component {
         let name_elements = "";
         if (this.props.formType === 'signup') {
             name_elements = (
-                <label>Name:
-                    <input type='text' value={this.state.name} onChange={(e) => this.update(e, 'name')}/>
-                </label>
+                <>
+                    <label>First Name:
+                        <input className='user-form-input' placeholder='First Name' type='text'  value={this.state.first_name} onChange={(e) => this.update(e, 'first_name')}/>
+                    </label>
+                    <label>Last Name:
+                        <input className='user-form-input'  placeholder='Last Name' type='text' value={this.state.last_name} onChange={(e) => this.update(e, 'last_name')}/>
+                    </label>
+                </>
             )
         }
+
 
         return(
             <div className='form-container'>
                 <form className='user-auth-forms' onSubmit={this.handleSubmit}>
-                    {formTitle}
+                    {formHeader}
                     {name_elements}
                     <label>Email:
-                        <input type='text' value={this.state.email} onChange={(e) => this.update(e,'email')} />
+                        <input className='user-form-input'  placeholder='Email' type='text' value={this.state.email} onChange={(e) => this.update(e,'email')} />
                     </label>
                     <label>Password:
-                        <input type='password' value={this.state.password} onChange={(e) => this.update(e,'password')}/>
+                        <input className='user-form-input'  placeholder='Password' type='password' value={this.state.password} onChange={(e) => this.update(e,'password')}/>
                     </label>
                     <button onClick={this.handleSubmit}>Submit</button>
+                    {demoButton}
+                    {switchLink}
                     <ul>
                         {this.props.errors.map((error, i) => (
                         <li className="user-form-error" key={`error-${i}`}>

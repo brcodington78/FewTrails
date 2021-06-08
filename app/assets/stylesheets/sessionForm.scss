@@ -2,22 +2,60 @@
 .form-container {
     height: 1000px;
     background-image: url(https://cdn.pixabay.com/photo/2015/10/12/15/01/mountain-984083_1280.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 
 
 
 .user-auth-forms {
+    border-radius: 15px;
+    background-color: beige;
     display: flex;
     position: relative;
+    box-shadow: 0 8px 16px black;
     top: 40px;
-    height: 400px;
+    height: 60%;
+    width: 25%;
     flex-direction: column;
     align-content: center;
     align-items: center;
     justify-content: space-evenly;
 }
 
+.user-auth-forms > label{
+    font-family: sans-serif;
+    
+}
+
+.user-auth-forms > h1 {
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: larger;
+}
+
+
+.user-form-input {
+    border: 2px solid lightgray;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border-color: grey;
+}
+
 .user-form-error {
     color: #fccb7c;
+}
+
+.user-auth-forms > button{
+
+    padding: 10px 13px;
+    box-sizing: border-box;
+    width: 80%;
+    font-family: sans-serif;
+    font-weight: bold;
 }

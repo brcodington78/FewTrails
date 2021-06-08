@@ -67,7 +67,7 @@ class Navbar extends React.Component {
     // }
     
     render() {
-        console.log(this.props)
+        
         return (
         <div className='navbar'>
             <ul className='other-nav-options'>
@@ -76,11 +76,14 @@ class Navbar extends React.Component {
                 <li className='history'>History</li>
 
             </ul>
-            
-            <div className='center-nav'>
-                <img src='https://i.imgur.com/akcuC2s.png' alt='FewTrails Logo' />
+            <Link to='/' className='header-bar'>
+                <div className='center-nav'>
                 
-            </div>
+                    <img src='https://i.imgur.com/akcuC2s.png' alt='FewTrails Logo' />
+                
+                
+                </div>
+            </Link>
             
             <UserButtons location = {this.props.location.pathname} currentUser= {this.props.currentUser} logout={this.props.logout}/>
         </div>
