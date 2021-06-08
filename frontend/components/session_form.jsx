@@ -7,7 +7,8 @@ class SessionForm extends React.Component {
         super(props)
         if (this.props.formType === "signup"){
             this.state = {
-                name: '',
+                first_name: '',
+                last_name: '',
                 email: '',
                 password: ''
             }
@@ -17,10 +18,15 @@ class SessionForm extends React.Component {
                 password: ''
             }
         }
-        
-        
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.demoUser = this.demoUser.bind(this);
     }
+
+    demoUser() {
+        
+        let demoUser = { email: "jdoe@yahoo.com", password: "123456" };
+        this.props.processForm(demoUser)
+      }
     
     componentWillUnmount() {
         dispatch(clearErrors())
@@ -42,6 +48,7 @@ class SessionForm extends React.Component {
     render() {
         let switchLink;
         let formHeader;
+        let demoButton;
         if (this.props.formType === 'signup') {
             formHeader = (
                 <h1>Create a new account!</h1>
@@ -56,17 +63,26 @@ class SessionForm extends React.Component {
             switchLink = (
                 <Link to="/signup">Don't have an acount? Sign up!</Link>
             )
+            demoButton = (
+                <button onClick={this.demoUser}>Demo Login</button>
+            )
         }
 
 
         let name_elements = "";
         if (this.props.formType === 'signup') {
             name_elements = (
-                <label>Name:
-                    <input className='user-form-input' type='text' value={this.state.name} onChange={(e) => this.update(e, 'name')}/>
-                </label>
+                <>
+                    <label>First Name:
+                        <input className='user-form-input' type='text' value={this.state.first_name} onChange={(e) => this.update(e, 'first_name')}/>
+                    </label>
+                    <label>Last Name:
+                        <input className='user-form-input' type='text' value={this.state.last_name} onChange={(e) => this.update(e, 'last_name')}/>
+                    </label>
+                </>
             )
         }
+
 
         return(
             <div className='form-container'>
@@ -80,6 +96,7 @@ class SessionForm extends React.Component {
                         <input className='user-form-input' type='password' value={this.state.password} onChange={(e) => this.update(e,'password')}/>
                     </label>
                     <button onClick={this.handleSubmit}>Submit</button>
+                    {demoButton}
                     {switchLink}
                     <ul>
                         {this.props.errors.map((error, i) => (

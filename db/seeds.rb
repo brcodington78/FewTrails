@@ -7,3 +7,16 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+guest = User.create!(
+    first_name: 'John',
+    last_name: 'Doe',
+    email: 'jdoe@yahoo.com',
+    password: '123456'
+)
+
+u1 = User.create!(
+    first_name: 'Brian',
+    last_name: 'Codington',
+    email: 'bcod@gmail.com',
+    password: 'suhhh99'
+)
