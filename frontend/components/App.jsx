@@ -23,7 +23,7 @@ const App = () => {
       </header>
       <Switch>
         <AuthRoute exact path="/signup" component={SignupContainer}/>
-        <AuthRoute exact path="/login" component={LoginContainer}/>  
+        <AuthRoute exact path="/login" component={LoginContainer}/>
         <Redirect to='/' />      
       </Switch>
     </div>
