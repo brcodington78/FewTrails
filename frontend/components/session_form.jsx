@@ -20,13 +20,20 @@ class SessionForm extends React.Component {
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.demoUser = this.demoUser.bind(this);
+        this.demoSignUpUser = this.demoSignUpUser.bind(this)
     }
 
     demoUser() {
         
         let demoUser = { email: "jdoe@yahoo.com", password: "123456" };
         this.props.processForm(demoUser)
-      }
+    }
+
+    demoSignUpUser() {
+        
+        let demoSignUp = { email: `guest${Math.floor(Math.random()*100)}@yahoo.com`, password: "123456", first_name: 'Guest', last_name: 'hiker' };
+        this.props.processForm(demoSignUp)
+    }
     
     componentWillUnmount() {
         dispatch(clearErrors())
@@ -58,6 +65,9 @@ class SessionForm extends React.Component {
             )
             switchLink = (
                 <Link to="/login">Already have an acount? Log in</Link>
+            )
+            demoButton = (
+                <button onClick={this.demoSignUpUser}>Demo Sign Up</button>
             )
         } else if (this.props.formType === 'login') {
             formHeader = (
