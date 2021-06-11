@@ -13,5 +13,7 @@ export const createUser = user => dispatch =>{
       ), error => (
         dispatch(receiveErrors(error.responseJSON))
       ))
-}
+}   
+
+
 
