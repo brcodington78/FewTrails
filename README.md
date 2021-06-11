@@ -29,5 +29,5 @@ Here is a working live demo: [I'm an inline-style link](https://fewtrails.heroku
  This application will have the ability to search for trails and parks using key words found in the their respective names.
  
  ### Park/Trail pages
- Each park and trail will have its own page with information about the park/trails. Trails will have information that helps users prepare for each hike
+ Each park and trail will have its own page with information about the park/trails. Trails will have information that helps users prepare for each hike such as, but not limited to, the difficulty, assoctiated terms, length, and elevation gain of a trail. Parks pages will contain information about the park, 
  
