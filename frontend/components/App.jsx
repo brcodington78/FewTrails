@@ -12,6 +12,7 @@ import SessionForm from './session_form'
 import LoginContainer from './login_form_container'
 import SignupContainer from './signup_form_container'
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import TrailsPage from './trails/trails_page'
 
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
       <Switch>
         <AuthRoute exact path="/signup" component={SignupContainer}/>
         <AuthRoute exact path="/login" component={LoginContainer}/>
+        {/* <Route path='/trail/:id' component={TrailPage} /> */}
         <Redirect to='/' />      
       </Switch>
     </div>

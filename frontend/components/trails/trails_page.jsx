@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
-import {logout} from '../actions/session_actions';
+import {logout} from '../../actions/session_actions';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-class TrailPage extends React.Component {
+class TrailsPage extends React.Component {
     constructor(props) {
         super(props)
     }
@@ -24,3 +24,4 @@ class TrailPage extends React.Component {
     }
 }
 
+export default TrailsPage
