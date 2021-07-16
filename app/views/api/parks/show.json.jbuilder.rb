@@ -1,0 +1,1 @@
+json.extract! trail, :id, :name, :map_url, :description
