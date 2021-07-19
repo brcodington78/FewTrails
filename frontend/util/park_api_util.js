@@ -1,13 +1,13 @@
 export const fetchParks = () => {
     return $.ajax({
         method: 'GET',
-        url: '/api/trails'
+        url: '/api/parks'
     });
 };
 
 export const fetchPark = id => {
     return $.ajax({
         method: 'GET',
-        url: `/api/trails${id}`
+        url: `/api/parks/${id}`
     })
 }

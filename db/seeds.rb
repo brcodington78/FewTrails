@@ -28,7 +28,7 @@ u1 = User.create!(
 
 
 king_range = Park.create!(
-    name: 'King Range Wilderness, California',
+    name: 'King Range Wilderness',
     description: "From beaches to high peaks commanding outstanding vistas, the King Range Wilderness is the wildest portion of the California coast. Indeed, the King Range is the longest stretch of undeveloped coastline in the United States outside of Alaska. Botanists consider the region's dune system extremely unique in that the aggressive introduced European dune grass has not yet encroached, as it has on most coastal dunes north of San Francisco. Rare coastal ancient forests of Douglas fir, madrone, and tan oak dominate the Honeydew Creek watershed. Endangered species include leafy reedgrass, California brown pelican, steelhead trout, Chinook and Coho salmon, bald eagle, peregrine falcon, northern spotted owl, and Roosevelt elk. The California Coastal Trail traverses the entire length of the area. In 2000, President Clinton designated the rocks and islands just offshore as the California Coast National Monument. Mountains, forests, streams, and coastal bluffs of the King Range Wilderness provide homes for the bald eagle, American peregrine falcon, osprey, spotted owl, Roosevelt elk, otter, gray fox, black bear, and other wildlife.",
     map_url: 'https://cdn-assets.alltrails.com/static-map/production/area/10150945/parks-us-california-king-range-wilderness-10150945-20210517084316000000000-763x240-1.png'
     
@@ -47,9 +47,9 @@ LCT_MTBSB = Trail.create!(
     difficulty: 'moderate'
 )
 
-# file = open('https://fewtrails-seeds.s3.amazonaws.com/LCT_MTBSB.jpg')
+file = URI.open('https://fewtrails-seeds.s3.amazonaws.com/LCT_MTBSB.jpg')
 
-# LCT_MTBSB.photo.attach(io: file, filename: 'LCT_MTBSB.jpg')
+LCT_MTBSB.photo.attach(io: file, filename: 'LCT_MTBSB.jpg')
 
 LCT_BFCVKC = Trail.create!(
     name: 'Lost Coast and Big Flat Creek via Kings Crest',
@@ -63,9 +63,9 @@ LCT_BFCVKC = Trail.create!(
     description: "This is a great 2-3 day trek with plenty of options to extend once you get down to the Lost Coast. Offering everything from mountain views, forest terrain, creek crossings, and beach hiking - it's hard to find a comparable hike that offers this all-in-one. The main challenges to be aware of are creek crossings at calf/knee height if there has been a recent storm, tide crossings where you will need to know the local tide timetables (Shelter Cove, CA), and the ascent at the end taking you up 3,000ft in ~3mi. It is highly recommended to do this in the late-Spring/ Summer/early-Fall. Be prepared for potential snow and challenging creek crossings in the winter. The trail is overgrown in some places and can have significant blowdown from the weather, so it's best to check with the local project office about trail conditions."
 )
 
-# file = open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/LCT_BFCVKC.jpg')
+file = URI.open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/LCT_BFCVKC.jpg')
 
-# LCT_BFCVKC.photo.attach(io: file, filename: 'LCT_BFCVKC.jpg')
+LCT_BFCVKC.photo.attach(io: file, filename: 'LCT_BFCVKC.jpg')
 
 PGLVLCT = Trail.create!(
     name: 'Punta Gorda Lighthouse via Lost Coast Trail',
@@ -79,13 +79,13 @@ PGLVLCT = Trail.create!(
     description: "Punta Gorda Lighthouse via Lost Cost Trail is a 7 mile moderately trafficked out and back trail located near Petrolia, California that features beautiful wild flowers and is rated as moderate. The trail is primarily used for hiking and is best used from May until October."
 )
 
-# file = open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/PGLVLCT.png')
+file = URI.open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/PGLVLCT.png')
 
-# PGLVLCT.photo.attach(io: file, filename: 'PGLVLCT.png')
+PGLVLCT.photo.attach(io: file, filename: 'PGLVLCT.png')
 
 
 del_valle = Park.create!(
-    name: 'Del Valle Regional Park, California',
+    name: 'Del Valle Regional Park',
     description: "This park is ideal for picnicking, horseback riding, boating, fishing and swimming. Lake Del Valle is located in Central Alameda County, about five miles south of the City of Livermore in the Arroya del Valle. Del Valle Dam and Lake Del Valle are features of the South Bay Aqueduct, which is part of the State Water Project.",
     map_url: 'https://cdn-assets.alltrails.com/static-map/production/area/10164140/parks-us-california-del-valle-regional-park-10164140-20210607081102000000000-763x240-1.png'
 
@@ -103,9 +103,9 @@ MFT = Trail.create!(
     description: "Murietta Falls Trail is a 13.2 mile heavily trafficked out and back trail located near Livermore, California that features a lake and is rated as difficult. The trail is primarily used for hiking and horses and is accessible year-round. Dogs are also able to use this trail but must be kept on leash."
 )
 
-# file = open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/MFT.png')
+file = URI.open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/MFT.png')
 
-# MFT.photo.attach(io: file, filename: 'MFT.png')
+MFT.photo.attach(io: file, filename: 'MFT.png')
 
 ESLTLDV = Trail.create!(
     name: 'East Shore Loop to Lake Del Valle',
@@ -119,9 +119,9 @@ ESLTLDV = Trail.create!(
     description: "East Shore Loop to Lake Del Valle is a 4.4 mile heavily trafficked loop trail located near Livermore, California that features a lake and is rated as moderate. The trail offers a number of activity options and is best used from April until October. Dogs are also able to use this trail."
 )
 
-# file = open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/ESLTLDV.png')
+file = URI.open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/ESLTLDV.png')
 
-# ESLTLDV.photo.attach(io: file, filename: 'ESLTLDV.png')
+ESLTLDV.photo.attach(io: file, filename: 'ESLTLDV.png')
 
 sycamore_grove = Park.create!(
     name: 'Sycamore Grove Park',
@@ -140,9 +140,9 @@ SCT = Trail.create!(
     coords: [37.64465, -121.78189],
     description: "Sycamore Creek Trail is a 4.9 mile moderately trafficked loop trail located near Livermore, California that features a river and is good for all skill levels. The trail is primarily used for hiking, walking, running, and mountain biking. Dogs are also able to use this trail but must be kept on leash."
 )
-# file = open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/SCT.jpg')
+file = URI.open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/SCT.jpg')
 
-# SCT.photo.attach(io: file, filename: 'SCT.jpg')
+SCT.photo.attach(io: file, filename: 'SCT.jpg')
 
 
 WWTL = Trail.create!(
@@ -157,9 +157,9 @@ WWTL = Trail.create!(
     description: "Winery and Wagon Trail Loop is a 6 mile loop trail located near Livermore, California that features beautiful wild flowers and is rated as moderate. The trail is primarily used for hiking, running, and mountain biking."
 )
 
-# file = open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/WWTL.png')
+file = URI.open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/WWTL.png')
 
-# WWTL.photo.attach(io: file, filename: 'WWTL.png')
+WWTL.photo.attach(io: file, filename: 'WWTL.png')
 
 
 ADVRT = Trail.create!(
@@ -174,9 +174,9 @@ ADVRT = Trail.create!(
     description: "Arroyo Del Valle Regional Trail is a 5.9 mile moderately trafficked out and back trail located near Livermore, California that features beautiful wild flowers and is good for all skill levels. The trail offers a number of activity options. Dogs are also able to use this trail but must be kept on leash."
 )
 
-# file = open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/ADVRT.jpg')
+file = URI.open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/ADVRT.jpg')
 
-# ADVRT.photo.attach(io: file, filename: 'ADVRT.jpg')
+ADVRT.photo.attach(io: file, filename: 'ADVRT.jpg')
 
 
 

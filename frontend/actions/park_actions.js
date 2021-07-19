@@ -1,4 +1,4 @@
-import * as APIUtil from '../util/trail_api_util'
+import * as APIUtil from '../util/park_api_util'
 
 
 export const RECEIVE_PARK = 'RECEIVE_PARK'
@@ -16,12 +16,12 @@ export const receiveParks = parks => ({
 
 export const fetchParks = () => dispatch => (
     APIUtil.fetchParks().then(parks => (
-        dispatch(receiveParks)
+        dispatch(receiveParks(parks))
     ))
 )
 
 export const fetchPark = id => dispatch => (
-    APIUtil.fetchPark(is).then(park => (
-        dispatch(receivePark)
+    APIUtil.fetchPark(id).then(park => (
+        dispatch(receivePark(park))
     ))
 )
