@@ -28,9 +28,8 @@ class TrailsPage extends React.Component {
       return <div>Loading</div>;
     } else {
         return (
-          <>
-            <h1>Trail Page</h1>
-            <div>
+          <div className='trail-page-container'>
+            <div className='banner-top'>
               <p>{`United States > California > ${park.name} > ${trail.name}`}</p>
               {/* <SearchBar /> */}
             </div>
@@ -39,11 +38,12 @@ class TrailsPage extends React.Component {
               difficulty={trail.difficulty}
               photoUrl={trail.photoUrl}
               parkName={park.name}
+              coords={trail.coords}
             />
             {/* <NearbyTrails />
                 <TrailDescription />
                 <TrailNav /> */}
-          </>
+          </div>
         );
       }
     }

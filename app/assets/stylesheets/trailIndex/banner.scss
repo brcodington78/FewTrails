@@ -1,0 +1,43 @@
+.banner-container {
+    position: relative;
+
+}
+
+.trail-image-text {
+    position:absolute;
+    top: 200px;
+    left:10px;
+
+}
+
+.trail-banner-img {
+    height: 312px;
+    width: 1022px;
+}
+
+.banner-options {
+    background-color: #428a13;
+    height: 55px;
+    width: 1022px;
+}
+
+.directions-icon {
+    height: 48px;
+    width: 48px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    bottom: 25px;
+    left: 10px;
+    
+}
+
+.directions-pic {
+    width: 24px;
+    height: 24px;
+}
+
