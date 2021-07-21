@@ -2,6 +2,8 @@ import { logout } from "../../actions/session_actions";
 import React from "react";
 import { Link } from "react-router-dom";
 import Banner from "./banner";
+import RightSideBar from './rightSideBar/right_side_bar'
+// import LeftSideBar from './leftSideBar/left_side_bar'
 
 class TrailsPage extends React.Component {
   constructor(props) {
@@ -40,9 +42,11 @@ class TrailsPage extends React.Component {
               parkName={park.name}
               coords={trail.coords}
             />
-            {/* <NearbyTrails />
-                <TrailDescription />
-                <TrailNav /> */}
+           <div className='sidebar-container'>
+               {/* <LeftSideBar /> */}
+               <RightSideBar coords={trail.coords} parkId={park.id}/>
+
+           </div>
           </div>
         );
       }

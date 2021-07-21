@@ -19,7 +19,7 @@ const App = () => {
   
   return (
     <div>
-      <header>
+      <header >
         <Route path='/' component={NavbarContainer} />
       </header>
       <Switch>
@@ -28,6 +28,7 @@ const App = () => {
         <Route path='/trail/:id' component={TrailsPageContainer} />
         <Redirect to='/' />      
       </Switch>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG5-8hwFBCtU_MiBfKFJwsXJK8zue651o&callback=initMap&libraries=&v=weekly" async></script>
     </div>
     )
 };

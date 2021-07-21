@@ -19,6 +19,15 @@
     background-color: #428a13;
     height: 55px;
     width: 1022px;
+    position: relative;
+    bottom: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner-options:hover {
+    background-color: #a4da81;
 }
 
 .directions-icon {
@@ -32,12 +41,16 @@
     justify-content: center;
     position: relative;
     bottom: 25px;
-    left: 10px;
+    box-shadow: 0 2px 8px 0;
+
     
 }
 
 .directions-pic {
     width: 24px;
     height: 24px;
+    border-radius: 50%;
+
 }
+
 
