@@ -1,0 +1,19 @@
+.tag-text {
+    font-size: 14px;
+    cursor: default;
+    margin: 5px 0;
+    display: inline-block;
+    font-weight: 500;
+    background-color: #FFFFFF;
+    color: #428A13;
+    white-space: nowrap;
+    border-radius: 8px;
+    border: solid 1px #428A13;
+    padding: 5.5px 12px;
+    margin-right: 5px;
+}
+
+.stat-list {
+    display: flex;
+    justify-content: space-around;
+}

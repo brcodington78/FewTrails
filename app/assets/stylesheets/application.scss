@@ -19,8 +19,9 @@
 @import './trailIndex/banner';
 @import './trailIndex/trail-show.scss';
 @import './trailIndex/trail-list-item';
+@import './trailIndex/left-side-bar';
 
 header {
-    border: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
 }
 
