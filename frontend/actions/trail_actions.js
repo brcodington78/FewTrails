@@ -15,7 +15,7 @@ export const receiveTrails = trails => ({
 
 export const fetchTrails = () => dispatch => (
     APIUtil.fetchTrails().then(trails => (
-        dispatch(receiveTrail(trails))
+        dispatch(receiveTrails(trails))
     ))
 )
 
