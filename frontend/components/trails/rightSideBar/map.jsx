@@ -19,11 +19,10 @@ const MyMapComponent = withScriptjs(withGoogleMap((props) =>
     defaultZoom={16}
     defaultCenter={{ lat: props.coords[0], lng: props.coords[1] }}
   >
+    
     {props.isMarkerShown && <Marker position={{ lat: props.coords[0], lng: props.coords[1] }} />}
   </GoogleMap>
 ))
-
-
 
 
 export default MyMapComponent

@@ -17,6 +17,8 @@ class TrailsPage extends React.Component {
     
   }
 
+  
+
   componentDidMount() {
     console.log('props',this.props)
     this.props

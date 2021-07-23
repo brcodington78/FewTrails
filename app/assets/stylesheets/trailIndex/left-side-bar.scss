@@ -1,3 +1,14 @@
+.description {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.tags {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+
 .tag-text {
     font-size: 14px;
     cursor: default;
@@ -16,4 +27,16 @@
 .stat-list {
     display: flex;
     justify-content: space-around;
+    padding-top: 24px;
 }
+
+.stat {
+    font-weight: bold;
+}
+
+.stat-title {
+    font-size: 12px;
+    line-height: 1.42;
+    display: block;
+}
+
