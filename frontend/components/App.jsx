@@ -19,7 +19,7 @@ import Home from './home/home'
 const App = () => {
   
   return (
-    <div>
+    <div className='giant-container'>
       <header >
         <Route path='/' component={NavbarContainer} />
       </header>
