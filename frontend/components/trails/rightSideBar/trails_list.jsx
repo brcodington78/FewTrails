@@ -19,7 +19,7 @@ const TrailsList = (props) => {
     // console.log('listItems',listItems)
     return (
         <>
-            <h2>Nearby Trails</h2>
+            <h2 className='nearby-h2'>Nearby Trails</h2>
             <ul className='trails-list'>
                 {/* <li>{listItems}</li> */}
                 {trailArr.map((trail) => (

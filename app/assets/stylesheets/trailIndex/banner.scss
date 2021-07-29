@@ -42,7 +42,7 @@
     justify-content: center;
     position: relative;
     bottom: 25px;
-    box-shadow: 0 2px 8px 0;
+    box-shadow: 0 2px 8px 0 black;
 
     
 }
@@ -54,4 +54,15 @@
 
 }
 
-
+.trail-park {
+    background: green;
+    color: white;
+    width: 72px;
+    display: inline-block;
+    border-radius: 6px;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.42;
+}
