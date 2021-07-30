@@ -20,7 +20,7 @@ class TrailsPage extends React.Component {
   
 
   componentDidMount() {
-    console.log('props',this.props)
+    
     this.props
       .fetchTrails()
       .then(() =>
@@ -51,7 +51,7 @@ class TrailsPage extends React.Component {
       return (
         <div className="trail-page-container">
           <div className="banner-top">
-        <p className='location-path'>{`United States  >  California  >  ${park.name}  >  ${trail.name}`}</p>
+            <p className='location-path'>{`United States  >  California  >  ${park.name}  >  ${trail.name}`}</p>
             {/* <SearchBar /> */}
           </div>
           <Banner

@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import ParkShowPage from './parks_show'
-import { fetchParks, fetchPark } from '../../util/park_api_util';
+import { fetchParks, fetchPark } from '../../actions/park_actions';
 import { fetchTrails } from '../../actions/trail_actions';
 
 
