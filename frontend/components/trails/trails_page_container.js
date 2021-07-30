@@ -1,7 +1,5 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import { Link } from 'react-router-dom';
-import TrailPage from './trails_page'
 import TrailsPage from './trails_page';
 import { fetchTrail, fetchTrails } from '../../actions/trail_actions';
 import {fetchPark, fetchParks} from '../../actions/park_actions'

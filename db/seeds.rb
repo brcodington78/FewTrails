@@ -32,8 +32,7 @@ king_range = Park.create!(
     us_state: 'California',
     description1: "Looking for a great trail in King Range Wilderness, California? AllTrails has 18 great hiking trails, views trails, wildlife trails and more, with hand-curated trail maps and driving directions as well as detailed reviews and photos from hikers, campers, and nature lovers like you. Ready for some activity? There are 11 moderate trails in King Range Wilderness ranging from 1.5 to 48.4 miles and from 36 to 4,091 feet above sea level. Start checking them out and you'll be out on the trail in no time!",
     coords: [40.1840764, -124.1601363],
-    description2: "From beaches to high peaks commanding outstanding vistas, the King Range Wilderness is the wildest portion of the California coast. Indeed, the King Range is the longest stretch of undeveloped coastline in the United States outside of Alaska. Botanists consider the region's dune system extremely unique in that the aggressive introduced European dune grass has not yet encroached, as it has on most coastal dunes north of San Francisco. Rare coastal ancient forests of Douglas fir, madrone, and tan oak dominate the Honeydew Creek watershed. Endangered species include leafy reedgrass, California brown pelican, steelhead trout, Chinook and Coho salmon, bald eagle, peregrine falcon, northern spotted owl, and Roosevelt elk. The California Coastal Trail traverses the entire length of the area. In 2000, President Clinton designated the rocks and islands just offshore as the California Coast National Monument. Mountains, forests, streams, and coastal bluffs of the King Range Wilderness provide homes for the bald eagle, American peregrine falcon, osprey, spotted owl, Roosevelt elk, otter, gray fox, black bear, and other wildlife.",
-    map_url: 'https://cdn-assets.alltrails.com/static-map/production/area/10150945/parks-us-california-king-range-wilderness-10150945-20210517084316000000000-763x240-1.png'
+    description2: "From beaches to high peaks commanding outstanding vistas, the King Range Wilderness is the wildest portion of the California coast. Indeed, the King Range is the longest stretch of undeveloped coastline in the United States outside of Alaska. Botanists consider the region's dune system extremely unique in that the aggressive introduced European dune grass has not yet encroached, as it has on most coastal dunes north of San Francisco. Rare coastal ancient forests of Douglas fir, madrone, and tan oak dominate the Honeydew Creek watershed. Endangered species include leafy reedgrass, California brown pelican, steelhead trout, Chinook and Coho salmon, bald eagle, peregrine falcon, northern spotted owl, and Roosevelt elk. The California Coastal Trail traverses the entire length of the area. In 2000, President Clinton designated the rocks and islands just offshore as the California Coast National Monument. Mountains, forests, streams, and coastal bluffs of the King Range Wilderness provide homes for the bald eagle, American peregrine falcon, osprey, spotted owl, Roosevelt elk, otter, gray fox, black bear, and other wildlife."
     
 )
 
@@ -92,17 +91,16 @@ PGLVLCT.photo.attach(io: file, filename: 'PGLVLCT.png')
 
 del_valle = Park.create!(
     name: 'Del Valle Regional Park',
-    state: 'California',
+    us_state: 'California',
     coords: [37.5944972, -121.7111269],
     description1: "Looking for a great trail in Del Valle Regional Park, California? AllTrails has 21 great hiking trails, trail running trails, mountain biking trails and more, with hand-curated trail maps and driving directions as well as detailed reviews and photos from hikers, campers, and nature lovers like you. Ready for some activity? There are 14 moderate trails in Del Valle Regional Park ranging from 2.1 to 14.2 miles and from 593 to 1,348 feet above sea level. Start checking them out and you'll be out on the trail in no time!",
-    description2: "This park is ideal for picnicking, horseback riding, boating, fishing and swimming. Lake Del Valle is located in Central Alameda County, about five miles south of the City of Livermore in the Arroya del Valle. Del Valle Dam and Lake Del Valle are features of the South Bay Aqueduct, which is part of the State Water Project.",
-    map_url: 'https://cdn-assets.alltrails.com/static-map/production/area/10164140/parks-us-california-del-valle-regional-park-10164140-20210607081102000000000-763x240-1.png'
-
+    description2: "This park is ideal for picnicking, horseback riding, boating, fishing and swimming. Lake Del Valle is located in Central Alameda County, about five miles south of the City of Livermore in the Arroya del Valle. Del Valle Dam and Lake Del Valle are features of the South Bay Aqueduct, which is part of the State Water Project."
+    
 )
 
 MFT = Trail.create!(
     name: 'Murietta Falls Trail',
-    state: 'California'
+    us_state: 'California',
     park_id: del_valle.id,
     length_in_miles: 13.2,
     elevation_gain_in_feet: 4370,
@@ -119,7 +117,7 @@ MFT.photo.attach(io: file, filename: 'MFT.png')
 
 ESLTLDV = Trail.create!(
     name: 'East Shore Loop to Lake Del Valle',
-    state: 'California',
+    us_state: 'California',
     park_id: del_valle.id,
     length_in_miles: 4.4,
     elevation_gain_in_feet: 849,
@@ -137,14 +135,13 @@ ESLTLDV.photo.attach(io: file, filename: 'ESLTLDV.png')
 sycamore_grove = Park.create!(
     name: 'Sycamore Grove Park',
     coords: [37.6449521, -121.7845845],
-    state: 'California',
-    description1: "Explore the most popular trails in Sycamore Grove Park with hand-curated trail maps and driving directions as well as detailed reviews and photos from hikers, campers and nature lovers like you.",
-    map_url: 'https://cdn-assets.alltrails.com/static-map/production/area/10149900/parks-us-california-sycamore-grove-park-10149900-20210513080359000000000-763x240-1.png'
+    us_state: 'California',
+    description1: "Explore the most popular trails in Sycamore Grove Park with hand-curated trail maps and driving directions as well as detailed reviews and photos from hikers, campers and nature lovers like you."
 )
 
 SCT = Trail.create!(
     name: 'Sycamore Creek Trail',
-    state: 'California',
+    us_state: 'California',
     park_id: sycamore_grove.id,
     length_in_miles: 4.9,
     elevation_gain_in_feet: 85,
@@ -161,7 +158,7 @@ SCT.photo.attach(io: file, filename: 'SCT.jpg')
 
 WWTL = Trail.create!(
     name: 'Winery and Wagon Trail Loop',
-    state: 'California',
+    us_state: 'California',
     park_id: sycamore_grove.id,
     length_in_miles: 6.0,
     elevation_gain_in_feet: 521,
@@ -179,7 +176,7 @@ WWTL.photo.attach(io: file, filename: 'WWTL.png')
 
 ADVRT = Trail.create!(
     name: 'Arroyo Del Valle Regional Trail',
-    state: 'California',
+    us_state: 'California',
     park_id: sycamore_grove.id,
     length_in_miles: 5.9,
     elevation_gain_in_feet: 137,

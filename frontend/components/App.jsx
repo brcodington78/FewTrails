@@ -13,6 +13,7 @@ import LoginContainer from './login_form_container'
 import SignupContainer from './signup_form_container'
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import TrailsPageContainer from './trails/trails_page_container'
+import ParksPageContainer from './parks/parks_show_container'
 import Home from './home/home'
 
 
@@ -27,7 +28,7 @@ const App = () => {
         <AuthRoute exact path="/signup" component={SignupContainer}/>
         <AuthRoute exact path="/login" component={LoginContainer}/>
         <Route path='/trail/:id' component={TrailsPageContainer} />
-        {/* <Route path='park/:id' component={ParksPageContainer} /> */}
+        <Route path='/park/:id' component={ParksPageContainer} />
         <Route exact path='/' component={Home} />
         <Redirect to='/' />      
       </Switch>
