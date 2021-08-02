@@ -1,5 +1,8 @@
 import React from 'react';
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import MyMapComponent from '../trails/rightSideBar/map'
+import {GoogleMap, withScriptjs, withGoogleMap} from 'react-google-maps'
+import { googleAPIKey } from '../../keys/keys'
 
 
 class ParkShowPage extends React.Component {
@@ -54,8 +57,32 @@ class ParkShowPage extends React.Component {
             let {us_state, name} = this.props.park
             return (
                 <div className='parkShowContainer'>
-                    <p className='location-path'>{`United States of America > ${us_state} > ${name}`}</p>
-                    {/* <SearchBar /> */}
+                    <div className='show-page-top'>
+                        <p className='location-path'>{`United States of America > ${us_state} > ${name}`}</p>
+                        {/* <SearchBar /> */}
+                    </div>
+                    <div className='picture-carousel'>
+
+                    </div>
+                    <div className='middle-park-show'>
+                        <h1>{`Trails in ${park.name}, ${us_state}`}</h1>
+                        {/* <Reviews /> */}
+                        <p>{park.description1}</p>
+                        <MyMapComponent
+                            isMarkerShown={true}
+                            googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${googleAPIKey}`}
+                            loadingElement={<div style={{ height: `100%` }} />}
+                            containerElement={<div style={{ height: `400px` }} />}
+                            mapElement={<div style={{ height: `100%` }} />}
+                            coords={park.coords}
+                            zoom={10}
+                        />
+                        <div className='buttons'>
+                            <div className='direction-button'>
+
+                            </div>
+                        </div> 
+                    </div>
                 </div>
             )
         }

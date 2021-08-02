@@ -98,6 +98,28 @@ del_valle = Park.create!(
     
 )
 
+del_pic_1 = URI.open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/del_valle/del_valle1.png')
+
+del_valle.photos.attach(io: del_pic_1, filename: 'del_valle1.png')
+
+del_pic_2 = URI.open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/del_valle/del_valle2.png')
+
+del_valle.photos.attach(io: del_pic_2, filename: 'del_valle2.png')
+
+del_pic_3 = URI.open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/del_valle/del_valle3.jpg')
+                    
+del_valle.photos.attach(io: del_pic_3, filename: 'del_valle3.png')
+
+del_pic_4 = URI.open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/del_valle/del_valle4.png')
+
+del_valle.photos.attach(io: del_pic_4, filename: 'del_valle4.png')
+
+del_pic_5 = URI.open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/del_valle/del_valle5.png')
+
+del_valle.photos.attach(io: del_pic_5, filename: 'del_valle5.png')
+
+
+
 MFT = Trail.create!(
     name: 'Murietta Falls Trail',
     us_state: 'California',

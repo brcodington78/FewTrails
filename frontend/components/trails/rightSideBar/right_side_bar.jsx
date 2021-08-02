@@ -21,6 +21,7 @@ const RightSideBar = (props) => {
                 containerElement={<div style={{ height: `400px` }} />}
                 mapElement={<div style={{ height: `100%` }} />}
                 coords={props.coords}
+                zoom={16}
             />
                 {/* <WrappedMap 
                 googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyCG5-8hwFBCtU_MiBfKFJwsXJK8zue651o`}
