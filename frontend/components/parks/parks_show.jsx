@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import MyMapComponent from '../trails/rightSideBar/map'
 import {GoogleMap, withScriptjs, withGoogleMap} from 'react-google-maps'
 import { googleAPIKey } from '../../keys/keys'
-import Carousel from './carousel';
 import Carousel2 from './carousel2'
+
 
 
 
@@ -33,12 +33,10 @@ class ParkShowPage extends React.Component {
                             filteredTrails.push(trail)
                         }
                     })
-                    console.log('filtered', filteredTrails)
                     return filteredTrails
                 } 
                 
                 this.setState({trails: trailFilter(data.trails, parkId)});
-                console.log('state trails', this.state.trails)
             })
         ) 
         
@@ -56,7 +54,6 @@ class ParkShowPage extends React.Component {
                 <div>Loading...</div>
             )
         }else {
-            console.log('park', park)
             let {us_state, name, photos} = this.props.park
             return (
                 <div className='parkShowContainer'>
@@ -66,7 +63,7 @@ class ParkShowPage extends React.Component {
                     </div>
                     <div className='picture-carousel'>
                         {/* <Carousel photos={photos}/> */}
-                        <Carousel2 />
+                        <Carousel2 photos={photos}/>
                     </div>
                     <div className='middle-park-show'>
                         <h1>{`Trails in ${park.name}, ${us_state}`}</h1>

@@ -4,7 +4,7 @@ import '@brainhubeu/react-carousel/lib/style.css';
 
 
 const Carousel2 = (props) => {
-    
+    console.log(props)
 
     return(
         <Carousel
@@ -19,9 +19,11 @@ const Carousel2 = (props) => {
                 },
             ]}
             >
-            <img src={'https://brainhubeu.github.io/react-carousel/static/mona-7a1ceae9bdb8c43272eb101c091c5408.jpg'} />
-            <img src={'https://brainhubeu.github.io/react-carousel/static/scream-ee207a05c1e6fed03aafa156cc511abe.jpg'} />
-            <img src={'https://brainhubeu.github.io/react-carousel/static/starry-night-39eed0a107ddb6c9f980eb3081a8bdd3.jpg'} />
+            {props.photos.map((photo, index) => {
+                return (
+                    <img className='park-image' key={`park-img-${index}`} src={photo.photoUrl} />
+                )
+            })}
         </Carousel>
     )
 }
