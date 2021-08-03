@@ -1,5 +1,6 @@
 import React from 'react'
 import ImageSlide from './image_slide'
+import Arrow from './arrow'
 
 class Carousel extends React.Component  {
 
@@ -9,10 +10,13 @@ class Carousel extends React.Component  {
         this.state ={ 
             currentImageIndex: 0
         }
+        this.previousSlide = this.previousSlide.bind(this);
+        this.nextSlide = this.nextSlide.bind(this);
     }
 
     previousSlide () {
-        const lastIndex = imgUrls.length - 1;
+        console.log('previousSlide hitting')
+        const lastIndex = this.props.photos.length - 1;
         const { currentImageIndex } = this.state;
         const shouldResetIndex = currentImageIndex === 0;
         const index =  shouldResetIndex ? lastIndex : currentImageIndex - 1;
@@ -23,36 +27,33 @@ class Carousel extends React.Component  {
       }
 
     nextSlide () {
-        const lastIndex = imgUrls.length - 1;
+        console.log('nextSlide hitting')
+        const lastIndex = this.props.photos.length - 1;
         const { currentImageIndex } = this.state;
         const shouldResetIndex = currentImageIndex === lastIndex;
         const index =  shouldResetIndex ? 0 : currentImageIndex + 1;
     
         this.setState({
           currentImageIndex: index
-    });
+        });
+    }
     
     render () {
+        console.log('carousel render', this.props)
         return(
             <div className='carousel'>
                 <Arrow
                     direction="left"
                     clickFunction={ this.previousSlide }
                     glyph="&#9664;" />
-                <ImageSlide url={ imgUrls[this.state.currentImageIndex] } />
-
-                {/* {props.photos.map(photo, index => {
-                    return (
-                        <ImageSlide photoUrl={photo.photoUrl}/>
-                    )
-                })} */}
+                <ImageSlide url={ this.props.photos[this.state.currentImageIndex].photoUrl } />
                 <Arrow
                     direction="right"
                     clickFunction={ this.nextSlide }
                     glyph="&#9654;" />
           </div>
-        )
-    }
+        );
+    };
 
         
 

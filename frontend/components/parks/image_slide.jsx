@@ -1,8 +1,9 @@
 import React from 'react'
 
-const ImageSlide = (props) => {
+const ImageSlide = ({url}) => {
+    console.log('url',url)
     const styles = {
-        backgroundImage: `url(${props.photoUrl})`,
+        backgroundImage: `url(${url})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center'
     }
