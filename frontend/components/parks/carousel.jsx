@@ -2,6 +2,7 @@ import React from 'react'
 import ImageSlide from './image_slide'
 import Arrow from './arrow'
 
+
 class Carousel extends React.Component  {
 
     constructor(props) {

@@ -4,6 +4,7 @@ import MyMapComponent from '../trails/rightSideBar/map'
 import {GoogleMap, withScriptjs, withGoogleMap} from 'react-google-maps'
 import { googleAPIKey } from '../../keys/keys'
 import Carousel from './carousel';
+import Carousel2 from './carousel2'
 
 
 
@@ -64,7 +65,8 @@ class ParkShowPage extends React.Component {
                         {/* <SearchBar /> */}
                     </div>
                     <div className='picture-carousel'>
-                        <Carousel photos={photos}/>
+                        {/* <Carousel photos={photos}/> */}
+                        <Carousel2 />
                     </div>
                     <div className='middle-park-show'>
                         <h1>{`Trails in ${park.name}, ${us_state}`}</h1>

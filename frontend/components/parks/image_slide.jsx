@@ -5,7 +5,9 @@ const ImageSlide = ({url}) => {
     const styles = {
         backgroundImage: `url(${url})`,
         backgroundSize: 'cover',
-        backgroundPosition: 'center'
+        backgroundPosition: 'center',
+        height: '200px',
+        width: '500px'
     }
 
     return (

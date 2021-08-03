@@ -28,6 +28,10 @@ module.exports = {
 //tells loader to use @babel/env which transpiles back to es5 and @babel/react which    converts jsx code
                   }
                 }
+            },
+            {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"],
             }
         ]
     },
