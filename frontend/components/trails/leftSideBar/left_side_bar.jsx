@@ -22,11 +22,11 @@ const LeftSideBar = (props) => {
                 </li>
             </ul>
             <div className='tags'>
-                {tags.map((tag) => {
+                {tags.map((tag, index) => {
                     console.log(tag)
                     return(
 
-                        <p className='tag-text'>{tag}</p>
+                        <p key={`tag-${index}`} className='tag-text'>{tag}</p>
                     )
                 })}
             </div>

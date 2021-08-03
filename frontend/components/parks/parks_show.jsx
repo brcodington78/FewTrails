@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import MyMapComponent from '../trails/rightSideBar/map'
 import {GoogleMap, withScriptjs, withGoogleMap} from 'react-google-maps'
 import { googleAPIKey } from '../../keys/keys'
+import Carousel from './carousel';
+
 
 
 class ParkShowPage extends React.Component {
@@ -54,7 +56,7 @@ class ParkShowPage extends React.Component {
             )
         }else {
             console.log('park', park)
-            let {us_state, name} = this.props.park
+            let {us_state, name, photos} = this.props.park
             return (
                 <div className='parkShowContainer'>
                     <div className='show-page-top'>
@@ -62,7 +64,7 @@ class ParkShowPage extends React.Component {
                         {/* <SearchBar /> */}
                     </div>
                     <div className='picture-carousel'>
-
+                        <Carousel photos={photos}/>
                     </div>
                     <div className='middle-park-show'>
                         <h1>{`Trails in ${park.name}, ${us_state}`}</h1>
