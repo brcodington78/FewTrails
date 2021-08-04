@@ -54,7 +54,7 @@ class ParkShowPage extends React.Component {
                 <div>Loading...</div>
             )
         }else {
-            let {us_state, name, photos} = this.props.park
+            let {us_state, name, photos, coords} = this.props.park
             return (
                 <div className='park-show-container'>
                     <div className='show-page-top'>
@@ -66,9 +66,10 @@ class ParkShowPage extends React.Component {
                         <Carousel2 photos={photos}/>
                     </div>
                     <div className='middle-park-show'>
-                        <h1>{`Trails in ${park.name}, ${us_state}`}</h1>
+                        <h1 className='park-header'>{`Best trails in ${park.name},`}</h1>
+                        <h1 className='park-header'>{park.us_state}</h1>
                         {/* <Reviews /> */}
-                        <p>{park.description1}</p>
+                        <p className='park-description'>{park.description1}</p>
                         <MyMapComponent
                             isMarkerShown={true}
                             googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${googleAPIKey}`}
@@ -78,10 +79,14 @@ class ParkShowPage extends React.Component {
                             coords={park.coords}
                             zoom={10}
                         />
-                        <div className='buttons'>
-                            <div className='direction-button'>
+                        <div className='buttons-park'>
 
-                            </div>
+                            <a className='direction-link-park' href={`https://www.google.com/maps/dir/Current+Location/${coords[0]},${coords[1]}?ref=trail-action-menu-directions`}>
+                                <div className='directions-icon2'>
+                                    <img className='directions-pic' src='https://cdn-assets.alltrails.com/assets/packs/media/Green-Variant/directions-green-ed305b8c.png'/>
+                                </div>
+                                <div className='directions-text-park'>Directions</div>
+                            </a>
                         </div> 
                     </div>
                 </div>

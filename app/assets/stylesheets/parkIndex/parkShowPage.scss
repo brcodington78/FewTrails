@@ -3,3 +3,58 @@
     width: 1022px;
     margin: auto;
 }
+
+.park-header {
+    line-height: 1.13;
+    letter-spacing: -.3px;
+    color: black;
+    font-weight: 600;
+    font-family: sans-serif;
+    font-size: 32px;
+}
+
+.park-description {
+    font-size: 18px;
+    line-height: 1.44;
+    font-family: sans-serif;
+}
+
+.middle-park-show {
+    width: 763;
+}
+
+.park-header {
+    line-height: 1.13;
+    letter-spacing: -.3px;
+    color: black;
+    font-weight: 600;
+    font-family: sans-serif;
+    width: 763px;
+    height: auto;
+}
+
+.directions-icon2 {
+    height: 48px;
+    width: 48px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: 0 2px 8px 0 black;
+
+    
+}
+
+.buttons-park {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.directions-text-park {
+    padding-left: 15px;
+    color: #428a12;
+}

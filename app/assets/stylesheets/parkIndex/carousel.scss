@@ -16,6 +16,7 @@
     height: 40px;
     z-index: 99;
     box-shadow: 0 2px 4px 0 grey;
+    transition: .2s ease-in-out;
 }
 .right-arrow {
     border-radius: 50%;
@@ -27,4 +28,16 @@
     height: 40px;
     z-index: 99;
     box-shadow: 0 2px 4px 0 grey;
+    transition: .2s ease-in-out;
+}
+
+.right-arrow:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.left-arrow:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+
 }
