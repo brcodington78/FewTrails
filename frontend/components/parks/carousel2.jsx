@@ -20,9 +20,9 @@ const Carousel2 = (props) => {
                 {
                     resolve: arrowsPlugin,
                     options: {
-                      arrowLeft: <button>Left</button>,
+                      arrowLeft: <button className='left-arrow'>{`<`}</button>,
                       arrowLeftDisabled: <button><Icon name="angle-left" /></button>,
-                      arrowRight: <button>Right</button>,
+                      arrowRight: <button className='right-arrow'>{`>`}</button>,
                       arrowRightDisabled: <button><Icon name="angle-right" /></button>,
                       addArrowClickHandler: true,
                     }
