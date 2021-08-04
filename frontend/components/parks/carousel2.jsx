@@ -1,6 +1,7 @@
 import React from 'react'
-import Carousel, { slidesToShowPlugin } from '@brainhubeu/react-carousel';
+import Carousel, { slidesToShowPlugin, arrowsPlugin } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
+import Icon from 'react-fa';
 
 
 const Carousel2 = (props) => {
@@ -10,13 +11,22 @@ const Carousel2 = (props) => {
         <Carousel
             plugins={[
                 'infinite',
-                'arrows',
                 {
                 resolve: slidesToShowPlugin,
                 options: {
-                numberOfSlides: 2
+                numberOfSlides: 3
                 }
                 },
+                {
+                    resolve: arrowsPlugin,
+                    options: {
+                      arrowLeft: <button>Left</button>,
+                      arrowLeftDisabled: <button><Icon name="angle-left" /></button>,
+                      arrowRight: <button>Right</button>,
+                      arrowRightDisabled: <button><Icon name="angle-right" /></button>,
+                      addArrowClickHandler: true,
+                    }
+                }
             ]}
             >
             {props.photos.map((photo, index) => {

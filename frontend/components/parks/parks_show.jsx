@@ -56,7 +56,7 @@ class ParkShowPage extends React.Component {
         }else {
             let {us_state, name, photos} = this.props.park
             return (
-                <div className='parkShowContainer'>
+                <div className='park-show-container'>
                     <div className='show-page-top'>
                         <p className='location-path'>{`United States of America > ${us_state} > ${name}`}</p>
                         {/* <SearchBar /> */}
