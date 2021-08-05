@@ -4,6 +4,7 @@ import MyMapComponent from '../trails/rightSideBar/map'
 import {GoogleMap, withScriptjs, withGoogleMap} from 'react-google-maps'
 import { googleAPIKey } from '../../keys/keys'
 import Carousel2 from './carousel2'
+import ParkTrailList from './ParkTrailList'
 
 
 
@@ -14,33 +15,38 @@ class ParkShowPage extends React.Component {
         this.state = {
             trails: null
         }
+        // this.trailFilter = this.trailFilter.bind(this)
         
     }
 
+    trailFilter = (trails, parkId) => {
+                    
+        let filteredTrails = []
+        trails.forEach(trail => {
+            if(trail.park_id === parkId){
+                filteredTrails.push(trail)
+            }
+        })
+        return filteredTrails
+    } 
+
     
     componentDidMount() {
-
+        
         let {fetchParks, fetchTrails, fetchPark, parkId, trails} = this.props
         fetchPark(parkId)
         .then(() => 
             fetchTrails()
             .then((data) => {
-                let trailFilter = (trails, parkId) => {
-                    
-                    let filteredTrails = []
-                    trails.forEach(trail => {
-                        if(trail.park_id === parkId){
-                            filteredTrails.push(trail)
-                        }
-                    })
-                    return filteredTrails
-                } 
                 
-                this.setState({trails: trailFilter(data.trails, parkId)});
+                
+                this.setState({trails: this.trailFilter(data.trails, parkId)});
             })
         ) 
         
     }
+
+    
 
     
 
@@ -51,7 +57,7 @@ class ParkShowPage extends React.Component {
         
         if (!trails || !park) {
             return (
-                <div>Loading...</div>
+                null
             )
         }else {
             let {us_state, name, photos, coords} = this.props.park
@@ -87,6 +93,9 @@ class ParkShowPage extends React.Component {
                                 </div>
                                 <div className='directions-text-park'>Directions</div>
                             </a>
+                        </div>
+                        <div className='park-trail-list-container'>
+                            <ParkTrailList trails={trails} parkName={name}/>
                         </div> 
                     </div>
                 </div>
