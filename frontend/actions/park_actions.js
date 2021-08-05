@@ -10,7 +10,7 @@ export const receivePark = park => ({
 })
 
 export const receiveParks = parks => ({
-    type: RECEIVE_PARK,
+    type: RECEIVE_PARKS,
     parks
 })
 

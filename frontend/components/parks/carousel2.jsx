@@ -5,7 +5,7 @@ import Icon from 'react-fa';
 
 
 const Carousel2 = (props) => {
-    console.log(props)
+    console.log("carousel props",props)
 
     return(
         <Carousel

@@ -36,6 +36,21 @@ king_range = Park.create!(
     
 )
 
+king1 = URI.open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/king_range/king_range1.jpg')
+king_range.photos.attach(io: king1, filename: 'king_range1')
+
+king2 = URI.open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/king_range/king_range2.jpg')
+king_range.photos.attach(io: king2, filename: 'king_range2')
+
+king3 = URI.open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/king_range/king_range3.jpg')
+king_range.photos.attach(io: king3, filename: 'king_range3')
+
+king4 = URI.open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/king_range/king_range4.jpg')
+king_range.photos.attach(io: king4, filename: 'king_range4')
+
+king5 = URI.open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/king_range/king_range5.jpg')
+king_range.photos.attach(io: king5, filename: 'king_range5')
+
 
 LCT_MTBSB = Trail.create!(
     name: 'Lost Coast Trail: Mattole to Black Sands Beach',
@@ -160,6 +175,23 @@ sycamore_grove = Park.create!(
     us_state: 'California',
     description1: "Explore the most popular trails in Sycamore Grove Park with hand-curated trail maps and driving directions as well as detailed reviews and photos from hikers, campers and nature lovers like you."
 )
+
+syc1 = URI.open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/sycamore_grove/sycamore1.jpg')
+sycamore_grove.photos.attach(io: syc1, filename: 'sycamore1.jpg')
+
+syc2 = URI.open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/sycamore_grove/sycamore2.jpg')
+sycamore_grove.photos.attach(io: syc2, filename: 'sycamore2.jpg')
+
+syc3 = URI.open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/sycamore_grove/sycamore3.jpg')
+sycamore_grove.photos.attach(io: syc3, filename: 'sycamore3.jpg')
+
+syc4 = URI.open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/sycamore_grove/sycamore4.jpg')
+sycamore_grove.photos.attach(io: syc4, filename: 'sycamore4.jpg')
+
+syc5 = URI.open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/sycamore_grove/sycamore5.jpg')
+sycamore_grove.photos.attach(io: syc5, filename: 'sycamore5.jpg')
+
+
 
 SCT = Trail.create!(
     name: 'Sycamore Creek Trail',

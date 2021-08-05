@@ -4,13 +4,22 @@ import ParkShowPage from './parks_show'
 import { fetchParks, fetchPark } from '../../actions/park_actions';
 import { fetchTrails } from '../../actions/trail_actions';
 
+const filterPark = (parks, id) => {
+    for(let i = 0; i < parks.length; i++){
+        if (parks[i].id === id) {
+            return parks[i]
+        }
+    }
+}
 
 const mSTP = (state, { match }) => {
+
+    
 
     const parkId = parseInt(match.params.id)
     return {
         parkId,
-        park: state.entities.parks[parkId - 1],
+        park: filterPark(state.entities.parks, parkId),
         parks: state.entities.parks,
         trails: state.entities.trails
     }
