@@ -19,9 +19,9 @@ const HomeTrailList = (props) => {
                 {
                     resolve: arrowsPlugin,
                     options: {
-                      arrowLeft: <button><Icon name="angle-double-left" /></button>,
-                      arrowLeftDisabled:<button><Icon name="angle-left" /></button>,
-                      arrowRight: <button><Icon name="angle-double-right" /></button>,
+                      arrowLeft: <button className='home-button-left'><Icon name="angle-double-left" /></button>,
+                      arrowLeftDisabled:<button className='home-button-left'><Icon name="angle-left" /></button>,
+                      arrowRight: <button className='home-button-right'><Icon name="angle-double-right" /></button>,
                       arrowRightDisabled: <button><Icon name="angle-right" /></button>,
                       addArrowClickHandler: true,
                     }
@@ -29,10 +29,10 @@ const HomeTrailList = (props) => {
             ]}
             >
             <HomeTrailItem trail={props.trails[0]} />
-            <HomeTrailItem trail={props.trails[0]} />
-            <HomeTrailItem trail={props.trails[0]} />
-            <HomeTrailItem trail={props.trails[0]} />
-            <HomeTrailItem trail={props.trails[0]} />
+            <HomeTrailItem trail={props.trails[1]} />
+            <HomeTrailItem trail={props.trails[2]} />
+            <HomeTrailItem trail={props.trails[3]} />
+            <HomeTrailItem trail={props.trails[4]} />
             
         </Carousel>
     )

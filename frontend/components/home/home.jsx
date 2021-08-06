@@ -25,9 +25,12 @@ class Home extends React.Component {
         return (
             <div>
                 <div className='home-banner'>
-                    <img className='home-pic' src={homePic2}>
+                    <img className='home-pic' src={homePic2}/>
+                    <div className='home-pic-text'>
+                        <h1>Find your next adventure</h1>
                         {/* <SearchBar /> */}
-                    </img>
+                        
+                    </div>
                 </div>
                 <div className='home-middle-container'>
                     <h2 className='home-middle-header'>Favorite Trails</h2>
