@@ -31,12 +31,12 @@ class TrailsPage extends React.Component {
     
   }
 
-//   filterTrails = () => {
-//       console.log('filter being hit')
-//       this.props.fetchTrails().then((data) => data.filter(trail => {
-//           trail.park_id === this.state.park.id && !(this.props.trail.name !== trail.name)
-//       }))
-//   }
+  // filterTrails = () => {
+  //     console.log('filter being hit')
+  //     this.props.fetchTrails().then((data) => data.filter(trail => {
+  //         trail.park_id === this.state.park.id && !(this.props.trail.name !== trail.name)
+  //     }))
+  // }
 
 
   render() {

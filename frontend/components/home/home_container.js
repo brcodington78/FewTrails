@@ -5,7 +5,7 @@ import { fetchTrails } from '../../actions/trail_actions';
 import { fetchPark, fetchParks } from '../../actions/park_actions';
 
 const mSTP = (state) => {
-    console.log('home container is hitting')
+    
     return {
         trails: state.entities.trails,
         parks: state.entities.parks
