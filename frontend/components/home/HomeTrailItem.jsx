@@ -5,7 +5,7 @@ const HomeTrailItem = (props) => {
 
 
 
-    console.log('trail item props', props)
+    
 
 
     let {trail} = props
@@ -28,6 +28,8 @@ const HomeTrailItem = (props) => {
                 <div className='home-trail-item-info'>
                     <h1 className='home-trail-item-name'>{trail.name}</h1>
                     {dif}
+                    <p className='home-trail-item-length'>{`Length: ${trail.length_in_miles}`}</p>
+
                 </div>
             </div>
         )

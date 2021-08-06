@@ -21,7 +21,7 @@ const HomeTrailList = (props) => {
                     options: {
                       arrowLeft: <button className='home-button-left'><Icon name="angle-double-left" /></button>,
                       arrowLeftDisabled:<button className='home-button-left'><Icon name="angle-left" /></button>,
-                      arrowRight: <button className='home-button-right'><Icon name="angle-double-right" /></button>,
+                      arrowRight: <button id='home-button-right'><Icon name="angle-double-right" /></button>,
                       arrowRightDisabled: <button><Icon name="angle-right" /></button>,
                       addArrowClickHandler: true,
                     }

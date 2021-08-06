@@ -16,6 +16,13 @@
 .home-pic-text {
     position: absolute;
     top: 200px;
+    font-size: 64px;
+    font-weight: 700;
+    font-family: arial;
+}
+
+.home-trail-item-info > * {
+    font-family: arial;
 }
 
 .home-middle-container {
@@ -50,7 +57,20 @@
     padding-bottom: 20px;
 }
 
-.home-button-right {
+#home-button-right {
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    position: relative;
+    right: 20px;
+    width: 35px;
+    height: 35px;
+    z-index: 99;
+    box-shadow: 0 2px 4px 0 grey;
+    transition: .2s ease-in-out;
+}
+
+#home-button-right2 {
     border-radius: 50%;
     background-color: white;
     border: none;
@@ -75,3 +95,4 @@
     box-shadow: 0 2px 4px 0 grey;
     transition: .2s ease-in-out; 
 }
+

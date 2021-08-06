@@ -1,12 +1,14 @@
-import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
-import HomeTrailList from './HomeTrailList'
+import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
+import HomeTrailList from './HomeTrailList';
+import HomeParkList from './HomeParkList';
+import HomeParkList2 from './HomeParkList2'
 
 class Home extends React.Component {
 
     constructor(props) {
         super(props);
-        console.log('props',props)
+        console.log('props home',props)
 
     }
     
@@ -14,6 +16,7 @@ class Home extends React.Component {
         let {fetchParks, fetchTrails} = this.props
         fetchParks()
         .then(() => fetchTrails())
+        .then(() => fetchParks())
 
     }
 
@@ -29,14 +32,17 @@ class Home extends React.Component {
                     <div className='home-pic-text'>
                         <h1>Find your next adventure</h1>
                         {/* <SearchBar /> */}
-                        
+
                     </div>
                 </div>
                 <div className='home-middle-container'>
                     <h2 className='home-middle-header'>Favorite Trails</h2>
 
                     <HomeTrailList trails={this.props.trails} parks={this.props.parks}/>
+                    <h2 className='home-middle-header'>Favorite Parks</h2>
+                    <HomeParkList2 parks={this.props.parks}/>
                 </div>
+                
                 <div>
                     <Link to='/trail/1'>Trail 1</Link>  
                     <Link to='/trail/2'>Trail 2</Link>
