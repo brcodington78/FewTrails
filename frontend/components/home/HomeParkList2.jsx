@@ -8,11 +8,34 @@ import { render } from 'react-dom';
 class HomeTrailList extends React.Component {
     constructor(props) {
         super(props)
+        // this.state = {
+        //     counter: 0
+        // }
+        
     }
     
+    
+
     componentDidUpdate() {
-        document.getElementById('home-button-right').click()
-        document.getElementById('home-button-right2').click()
+        
+        if(this.props.parks) {
+            document.getElementById('home-button-right').click()
+            document.getElementById('home-button-right2').click()
+            console.log('click! update')
+        }
+
+
+        // let button = document.getElementById('home-button-right2')
+
+        // console.log('button', button)
+        // if(this.props.parks && this.state.counter < 4 && button) {
+        //     document.getElementById('home-button-right').click()
+        //     document.getElementById('home-button-right2').click()
+        //     this.setState((state) => {
+        //         return {counter: state.counter + 1};
+        //       });
+            
+        // }
 
 
     }
