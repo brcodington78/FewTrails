@@ -5,7 +5,7 @@ import { fetchParks } from '../../actions/park_actions';
 
 const mSTP = (state) => {
     return {
-        trails: state.entites.trails,
+        trails: state.entities.trails,
         parks: state.entities.parks
     }
 }

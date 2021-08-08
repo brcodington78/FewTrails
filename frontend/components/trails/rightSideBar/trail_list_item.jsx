@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 const TrailListItem = (props) => {
     
-    console.log('list-item',props.parkName)
+    
 
     let shorterName = props.name;
     if (shorterName.length > 27) {

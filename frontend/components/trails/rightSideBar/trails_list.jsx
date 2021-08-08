@@ -9,7 +9,7 @@ const TrailsList = (props) => {
                 newTrailList.push(trails[i])
             }
         }
-        console.log('trailfilter',newTrailList)
+        
         return newTrailList
     }
     

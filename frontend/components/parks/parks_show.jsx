@@ -16,7 +16,7 @@ class ParkShowPage extends React.Component {
             trails: null
         
         }
-        console.log('park show props', this.props)
+        
         // this.trailFilter = this.trailFilter.bind(this)
         
     }
@@ -34,7 +34,7 @@ class ParkShowPage extends React.Component {
 
     
     componentDidMount() {
-        console.log('mount getting hit')
+        
         let {fetchParks, fetchTrails, fetchPark, parkId, trails} = this.props
         fetchParks()
         .then(() => 
@@ -56,8 +56,7 @@ class ParkShowPage extends React.Component {
                 
         const {trails} = this.state;
         const {park} = this.props
-        console.log({trails, park})
-        console.log({state: this.state})
+        
         if (!trails || !park) {
             return (
                 null

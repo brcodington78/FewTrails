@@ -5,7 +5,7 @@ import '@brainhubeu/react-carousel/lib/style.css';
 import HomeParkItem from './HomeParkItem'
 
 const HomeTrailList = (props) => {
-    console.log("home props", props)
+    
     let {parks} = props
 
     if (!parks) {

@@ -40,8 +40,7 @@ class TrailsPage extends React.Component {
 
 
   render() {
-    console.log("render");
-    console.log('trails', this.props.trails)
+    
     const { trail} = this.props;
     const {park} = this.state;
 
@@ -63,7 +62,6 @@ class TrailsPage extends React.Component {
           />
           <div className="sidebar-container">
             <LeftSideBar trail={trail}/>
-            {console.log('right-side-bar', trail, park)}
             <RightSideBar coords={trail.coords} parkId={park.id} parkName={park.name} trails={this.props.trails} pageTrailName={trail.name}/>
           </div>
         </div>

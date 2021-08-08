@@ -16,7 +16,7 @@ class Carousel extends React.Component  {
     }
 
     previousSlide () {
-        console.log('previousSlide hitting')
+        
         const lastIndex = this.props.photos.length - 1;
         const { currentImageIndex } = this.state;
         const shouldResetIndex = currentImageIndex === 0;
@@ -28,7 +28,7 @@ class Carousel extends React.Component  {
       }
 
     nextSlide () {
-        console.log('nextSlide hitting')
+        
         const lastIndex = this.props.photos.length - 1;
         const { currentImageIndex } = this.state;
         const shouldResetIndex = currentImageIndex === lastIndex;
@@ -40,7 +40,7 @@ class Carousel extends React.Component  {
     }
     
     render () {
-        console.log('carousel render', this.props)
+        
         return(
             <div className='carousel'>
                 <Arrow

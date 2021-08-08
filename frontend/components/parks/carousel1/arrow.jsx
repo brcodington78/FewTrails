@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Arrow = ({ direction, clickFunction, glyph }) => {
-    console.log('arrow', clickFunction)
+    
     return (
 
         <div

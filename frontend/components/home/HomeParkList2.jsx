@@ -42,7 +42,7 @@ class HomeTrailList extends React.Component {
     
 
     render() {
-        console.log("home props", this.props)
+        
         let {parks} = this.props
         if (!parks) {
             return null

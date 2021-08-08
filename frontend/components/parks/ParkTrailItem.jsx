@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 const ParkTrailItem = (props) => {
     let {trail} = props
-    console.log('ParkTrailItem', props)
+    
     return (
         <>
         <Link to={`/trail/${trail.trailId}`}>
