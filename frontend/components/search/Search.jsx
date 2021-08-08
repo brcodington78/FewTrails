@@ -20,7 +20,7 @@ class Search extends React.Component {
         let everything = this.props.trails.concat(this.props.parks);
         let result = []
         everything.forEach((item, index) => {
-            if(item.name.includes(query)){
+            if(item.name.toLowerCase().includes(query)){
                 result.push(item)
             }
         })
@@ -31,6 +31,7 @@ class Search extends React.Component {
     handleChange(event) {
         this.setState({query: event.target.value});
         this.setState({results: this.filterSearch(this.state.query)})
+        console.log('handleChange', this.state.results)
     }
     
     handleSubmit(event) {
@@ -41,6 +42,7 @@ class Search extends React.Component {
 
 
     render() {
+        console.log('search props 2', this.props)
         return (
             <div className='search'>
                 <form className='search-form'>
