@@ -2,8 +2,13 @@
     margin-bottom: 15px;
     background-color: lightblue;
     border-radius: 10px;  
+    height: 220px;
+    transition: background-color .2s ease-in-out;
 }
 
+.list-trail-item-container:hover {
+    background-color: #d6f1f9;
+}
 
 .trail-item-img {
     object-fit: cover;
@@ -20,7 +25,25 @@
 .trail-item-name {
     font-family: arial;
     font-weight: 600;
+    margin-bottom: 5px;
 }
+
+.trail-item-park-name {
+    font-size: 12px;
+    padding-top: 5px;
+    font-family: arial;
+    padding-bottom: 5px;
+}
+
+.trail-list-dif {
+    margin-bottom: 5px;
+}
+
+.trail-item-length {
+    font-family: arial;
+    font-size: 12px;
+}
+
 
 .nearby-h2 {
     padding: 10px 0;

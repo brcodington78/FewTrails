@@ -58,6 +58,7 @@ class TrailsPage extends React.Component {
             difficulty={trail.difficulty}
             photoUrl={trail.photoUrl}
             parkName={park.name}
+            parkId={park.id}
             coords={trail.coords}
           />
           <div className="sidebar-container">

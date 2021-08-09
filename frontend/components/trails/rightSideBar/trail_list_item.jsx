@@ -18,13 +18,13 @@ const TrailListItem = (props) => {
                     </Link>
                     <div className='trail-item-info'>
                         <h2 className='trail-item-name'>{shorterName}</h2>
-                        <h3>{props.parkName}</h3>
+                        <h3 className='trail-item-park-name'>{props.parkName}</h3>
                         <div>
-                            <p>{props.difficulty}</p>
+                            <p className={`${props.difficulty}-dif trail-list-dif`}>{props.difficulty}</p>
 
                         </div>
                         <div>
-                            <p>{props.length}</p>
+                            <p className='trail-item-length'>{`Length: ${props.length} mi`}</p>
                         </div>
 
                     </div>

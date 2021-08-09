@@ -23,7 +23,7 @@ const TrailsList = (props) => {
             <ul className='trails-list'>
                 {/* <li>{listItems}</li> */}
                 {trailArr.map((trail) => (
-                <TrailListItem key={trail.id} trailId={trail.id} parkName={props.parkName} name={trail.name} difficulty={trail.difficulty} length={trail.length_in_miles} photoUrl={trail.photoUrl}  />
+                <TrailListItem key={trail.id} trailId={trail.id} parkName={props.parkName} parkId={props.parkId} name={trail.name} difficulty={trail.difficulty} length={trail.length_in_miles} photoUrl={trail.photoUrl}  />
                 ))}
             </ul>
         </>
