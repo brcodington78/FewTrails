@@ -60,7 +60,7 @@ class Search extends React.Component {
 
         
         return (
-            <div className='search'>
+            <>
                 <form className='search-form'>
                     {/* <input className='search-type'></input> */}
                     <img className='magnifying-glass-pic' src='https://fewtrails-seeds.s3.us-west-1.amazonaws.com/random_assets/magnifying_glass.png'/>
@@ -71,7 +71,7 @@ class Search extends React.Component {
                 </form>
                 {dropdown}
                 
-            </div>
+            </>
         )
 
     }
