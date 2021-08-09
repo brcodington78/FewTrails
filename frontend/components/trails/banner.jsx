@@ -9,7 +9,7 @@ const Banner = (props) => {
             <img className='trail-banner-img' src={props.photoUrl}></img>
             <div className='trail-image-text'>
                 <h2 className='trail-title'>{props.name}</h2>
-                <p className='trail-park'>{props.difficulty}</p>
+                <p className={`${props.difficulty}-dif`}>{props.difficulty}</p>
             </div>
             <BannerOptions coords={props.coords}/>
 
