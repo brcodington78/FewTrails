@@ -1,9 +1,25 @@
+.list-trail-item-container {
+    margin-bottom: 15px;
+    background-color: lightblue;
+    border-radius: 10px;  
+}
+
+
 .trail-item-img {
     object-fit: cover;
     height: 128px;
     width: 292px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+.trail-item-info {
+    margin-left: 10px;
+}
+
+.trail-item-name {
+    font-family: arial;
+    font-weight: 600;
 }
 
 .nearby-h2 {
