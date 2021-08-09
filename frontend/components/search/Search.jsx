@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchDropdown from './SearchDropdown'
 
 class Search extends React.Component {
     constructor(props){
@@ -12,7 +13,7 @@ class Search extends React.Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.filterSearch = this.filterSearch.bind(this);
-        console.log('search props', this.props)
+        
         
     }
 
@@ -29,9 +30,17 @@ class Search extends React.Component {
 
 
     handleChange(event) {
+        
+        console.log('event.target.value', event.target.value)
         this.setState({query: event.target.value});
-        this.setState({results: this.filterSearch(this.state.query)})
-        console.log('handleChange', this.state.results)
+        console.log('skipping?')
+        if (this.state.query !== ''){
+            this.setState({results: this.filterSearch(this.state.query)})
+        } else {
+            this.setState({results: null})
+        }
+        console.log('query', this.state.query)
+        console.log('results', this.state.results)
     }
     
     handleSubmit(event) {
@@ -42,14 +51,26 @@ class Search extends React.Component {
 
 
     render() {
-        console.log('search props 2', this.props)
+        // console.log('search props 2', this.props)
+        
+        let dropdown;
+        if (this.state.results){
+            dropdown = <SearchDropdown searchList={this.state.results.slice(5)}/>
+        } 
+
+        
         return (
             <div className='search'>
                 <form className='search-form'>
                     {/* <input className='search-type'></input> */}
-                    <input className='search-input' value={this.state.query} onChange={this.handleChange}></input>
-                    <button onClick={this.handleSubmit}>Submit</button>
+                    <img className='magnifying-glass-pic' src='https://fewtrails-seeds.s3.us-west-1.amazonaws.com/random_assets/magnifying_glass.png'/>
+                    <input className='search-input' placeholder ='Search by park or trail name' value={this.state.query} onChange={this.handleChange}></input>
+                    <button className='home-search-button' onClick={this.handleSubmit}>
+                        <img className='home-search-right-arrow' src='https://fewtrails-seeds.s3.us-west-1.amazonaws.com/random_assets/right-arrow-svgrepo-com.svg'/>
+                    </button>
                 </form>
+                {dropdown}
+                
             </div>
         )
 
