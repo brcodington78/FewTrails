@@ -3,7 +3,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Banner from "./banner";
 import RightSideBar from "./rightSideBar/right_side_bar";
-import LeftSideBar from './leftSideBar/left_side_bar'
+import LeftSideBar from './leftSideBar/left_side_bar';
+import ShowSearchContainer from "../show_search/show_search_container";
 
 
 class TrailsPage extends React.Component {
@@ -51,7 +52,7 @@ class TrailsPage extends React.Component {
         <div className="trail-page-container">
           <div className="banner-top">
             <p className='location-path'>{`United States  >  California  >  ${park.name}  >  ${trail.name}`}</p>
-            {/* <SearchBar /> */}
+            <ShowSearchContainer />
           </div>
           <Banner
             name={trail.name}

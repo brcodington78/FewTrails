@@ -12,6 +12,7 @@
 
 .location-path {
     display: inline-block;
+    font-family: arial;
     color: #5A5A5A;
     text-shadow: none;
     font-size: 12px;
@@ -20,6 +21,9 @@
 .banner-top {
     padding-top: 8px;
     padding-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .trail-title {

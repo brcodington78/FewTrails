@@ -3,10 +3,10 @@ import {Link} from 'react-router-dom'
 
 const ParkTrailItem = (props) => {
     let {trail} = props
-    
+    console.log('trail', trail)
     return (
         <>
-        <Link to={`/trail/${trail.trailId}`}>
+        <Link to={`/trail/${trail.id}`}>
             <div className='park-trail-item-container'>
                 <img className='park-trail-item-pic' src={trail.photoUrl} />
                 <div className='park-trail-item-info'>

@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import Search from './Search';
+import ShowSearch from './ShowSearch';
 import { fetchTrails } from '../../actions/trail_actions';
 import { fetchParks } from '../../actions/park_actions';
 
@@ -17,4 +17,4 @@ const mDTP = dispatch => ({
 
 })
 
-export default connect(mSTP, mDTP)(Search)
+export default connect(mSTP, mDTP)(ShowSearch)
