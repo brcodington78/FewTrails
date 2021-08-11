@@ -2,6 +2,23 @@ header {
     height: 60px;
 }
 
+.header-button {
+    background-color: #01c5c4;
+    color: white;
+    padding: 10px 13px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    position: relative;
+    top: 10px;
+    right: 8px;
+    border-radius: 8px;
+    font-family: sans-serif;
+    border: 2px solid #01c5c4;
+    font-weight: bold;
+}
+
 
 
 .navbar {
@@ -75,4 +92,20 @@ header {
     font-family: sans-serif;
     border: 2px solid #01c5c4;
     font-weight: bold;
+}
+
+.signup-button:hover {
+    border: 2px solid lightblue;
+    background-color: lightblue;
+}
+
+.login-button:hover {
+    border: 2px solid lightblue;
+    color: lightblue;
+}
+
+.header-button:hover {
+    border: 2px solid lightblue;
+    background-color: lightblue;
+    cursor:pointer;
 }

@@ -64,7 +64,7 @@ class SessionForm extends React.Component {
                 <h1>Create a new account!</h1>
             )
             switchLink = (
-                <Link to="/login">Already have an acount? Log in</Link>
+                <Link className='form-link' to="/login">Already have an acount? Log in</Link>
             )
             demoButton = (
                 <button onClick={this.demoSignUpUser}>Demo Sign Up</button>
@@ -74,7 +74,7 @@ class SessionForm extends React.Component {
                 <h1>Login to find your adventure!</h1>
             )
             switchLink = (
-                <Link to="/signup">Don't have an acount? Sign up!</Link>
+                <Link className='form-link' to="/signup">Don't have an acount? Sign up!</Link>
             )
             demoButton = (
                 <button onClick={this.demoUser}>Demo Login</button>
@@ -86,12 +86,9 @@ class SessionForm extends React.Component {
         if (this.props.formType === 'signup') {
             name_elements = (
                 <>
-                    <label>First Name:
                         <input className='user-form-input' placeholder='First Name' type='text'  value={this.state.first_name} onChange={(e) => this.update(e, 'first_name')}/>
-                    </label>
-                    <label>Last Name:
+                    
                         <input className='user-form-input'  placeholder='Last Name' type='text' value={this.state.last_name} onChange={(e) => this.update(e, 'last_name')}/>
-                    </label>
                 </>
             )
         }
@@ -102,12 +99,8 @@ class SessionForm extends React.Component {
                 <form className='user-auth-forms' onSubmit={this.handleSubmit}>
                     {formHeader}
                     {name_elements}
-                    <label>Email:
                         <input className='user-form-input'  placeholder='Email' type='text' value={this.state.email} onChange={(e) => this.update(e,'email')} />
-                    </label>
-                    <label>Password:
                         <input className='user-form-input'  placeholder='Password' type='password' value={this.state.password} onChange={(e) => this.update(e,'password')}/>
-                    </label>
                     <button onClick={this.handleSubmit}>Submit</button>
                     {demoButton}
                     {switchLink}
