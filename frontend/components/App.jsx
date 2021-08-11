@@ -16,6 +16,7 @@ import TrailsPageContainer from './trails/trails_page_container';
 import ParksPageContainer from './parks/parks_show_container';
 import Home from './home/home';
 import HomeContainer from './home/home_container';
+import Footer from './footer/footer'
 
 
 const App = () => {
@@ -33,6 +34,7 @@ const App = () => {
         <Route exact path='/' component={HomeContainer} />
         <Redirect to='/' />      
       </Switch>
+      <Footer />
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG5-8hwFBCtU_MiBfKFJwsXJK8zue651o&callback=initMap&libraries=&v=weekly" async></script>
     </div>
     )

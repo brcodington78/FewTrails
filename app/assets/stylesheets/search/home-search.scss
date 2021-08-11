@@ -32,6 +32,9 @@
     border: none;
     background: lightblue;
     transition: background-color .2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .home-search-button:hover {

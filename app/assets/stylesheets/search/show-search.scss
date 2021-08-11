@@ -27,6 +27,9 @@
     border-radius: 8px;
     outline: none;
     background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .show-search-dropdown-list {
@@ -68,4 +71,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.show-search-right-arrow {
+    width: 25px;
+    height: 25px;
 }

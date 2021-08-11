@@ -1,5 +1,6 @@
 import React from 'react';
-import SearchDropdown from './SearchDropdown'
+import SearchDropdown from './SearchDropdown';
+import {Link} from 'react-router-dom'
 
 class Search extends React.Component {
     constructor(props){
@@ -65,7 +66,18 @@ class Search extends React.Component {
         let dropdown;
         if (this.state.results){
             dropdown = <SearchDropdown searchList={this.state.results}/>
-        } 
+        }
+
+        let ele = '/#/';
+        if (this.state.results) {
+            let firstPick = this.state.results[0];
+            if (firstPick.park_id) {
+                
+                ele = `/trail/${firstPick.id}`
+            } else {
+                ele = `/park/${firstPick.id}`
+            }
+        }
 
         
         return (
@@ -74,9 +86,9 @@ class Search extends React.Component {
                     {/* <input className='search-type'></input> */}
                     <img className='magnifying-glass-pic' src='https://fewtrails-seeds.s3.us-west-1.amazonaws.com/random_assets/magnifying_glass.png'/>
                     <input className='search-input' placeholder ='Search by park or trail name' value={this.state.query} onChange={(e) => this.handleChange(e)}></input>
-                    <button className='home-search-button' onClick={this.handleSubmit}>
+                    <Link to={ele} className='home-search-button'>
                         <img className='home-search-right-arrow' src='https://fewtrails-seeds.s3.us-west-1.amazonaws.com/random_assets/right-arrow-svgrepo-com.svg'/>
-                    </button>
+                    </Link>
                 </form>
                 {dropdown}
                 
