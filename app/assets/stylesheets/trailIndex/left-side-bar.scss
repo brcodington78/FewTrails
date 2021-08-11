@@ -4,13 +4,18 @@
     font-size: 18px;
     font-family: sans-serif;
     color: #414141;
-    line-height: 1.44;
+    line-height: 1.55;
     border-bottom: 1.5px solid lightgrey;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .tags {
     padding-top: 24px;
     padding-bottom: 24px;
+    padding-left: 20px;
 }
 
 

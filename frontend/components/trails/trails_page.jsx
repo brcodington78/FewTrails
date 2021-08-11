@@ -25,25 +25,18 @@ class TrailsPage extends React.Component {
     this.props
       .fetchTrails()
       .then(() =>
-        this.props
-          .fetchPark(this.props.trail.park_id)
-          .then((data) => this.setState({park: data.park}))
+        this.props.fetchParks()
+        
       );
     
   }
 
-  // filterTrails = () => {
-  //     console.log('filter being hit')
-  //     this.props.fetchTrails().then((data) => data.filter(trail => {
-  //         trail.park_id === this.state.park.id && !(this.props.trail.name !== trail.name)
-  //     }))
-  // }
 
 
   render() {
     
     const { trail} = this.props;
-    const {park} = this.state;
+    const {park} = this.props;
 
     if (!trail || !park) {
       return <div>Loading</div>;

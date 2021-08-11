@@ -17,7 +17,9 @@
 .park-description {
     font-size: 18px;
     line-height: 1.44;
-    font-family: sans-serif;
+    font-family: arial;
+    padding-top: 10px;
+    padding-bottom: 20px;
 }
 
 .middle-park-show {
@@ -79,7 +81,12 @@
     background-color: lightblue;
     border-radius: 5px;
     margin-bottom: 25px;
-    box-shadow: 0 8px 16px 0 grey
+    box-shadow: 0 8px 16px 0 grey;
+    transition: background-color .2s ease-in-out;
+}
+
+.park-trail-item-container:hover {
+    background-color: #d6f1f9;
 }
 
 .park-trail-item-pic {
@@ -91,6 +98,34 @@
 
 .park-trail-item-info {
     padding-left: 30px;
+    font-family: arial;
+    color: #414142;
+}
+
+.park-trail-item-info {
+    font-size: 18px;
+    height: 24px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+.park-trail-parkname {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.park-trail-length {
+    font-size: 14px;
+    font-weight: 400;
+    padding-top: 5px;
+}
+
+.park-trail-description {
+    font-weight: 400;
+    font-size: 16px;
+    padding-top: 10px;
+    max-width: 674px;
 }
 
 .park-trail-list-header {
@@ -102,4 +137,16 @@
     font-family: sans-serif;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.show-page-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.picture-carousel {
+    margin-bottom: 15px;
 }

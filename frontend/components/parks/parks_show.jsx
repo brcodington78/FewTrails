@@ -5,6 +5,7 @@ import {GoogleMap, withScriptjs, withGoogleMap} from 'react-google-maps'
 import { googleAPIKey } from '../../keys/keys'
 import Carousel2 from './carousel2'
 import ParkTrailList from './ParkTrailList'
+import ShowSearchContainer from '../show_search/show_search_container'
 
 
 
@@ -67,7 +68,7 @@ class ParkShowPage extends React.Component {
                 <div className='park-show-container'>
                     <div className='show-page-top'>
                         <p className='location-path'>{`United States of America > ${us_state} > ${name}`}</p>
-                        {/* <SearchBar /> */}
+                        <ShowSearchContainer />
                     </div>
                     <div className='picture-carousel'>
                         {/* <Carousel photos={photos}/> */}
