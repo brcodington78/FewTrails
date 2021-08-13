@@ -17,17 +17,32 @@ import {fetchPark, fetchParks} from '../../actions/park_actions'
 //     }
 //     return null
 // }
+const filterTrail = (trails, id) => {
+    for(let i = 0; i < trails.length; i++){
+        if (trails[i].id === id) {
+            return trails[i]
+        }
+    }
+}
 
 
 const mSTP = (state, { match }) => {
     
     const trailId = parseInt(match.params.id);
-    // const trail = fetchTrail(trailId)
+    const trail = filterTrail(state.entities.trails, trailId)
+    console.log('trail', trail)
+    
+    let park;
+    if (trail) {
+        park = filterTrail(state.entities.parks, trail.park_id)
+
+    }
     return {
         trailId,
-        trail: state.entities.trails[trailId - 1],
+        trail: trail,
         trails: state.entities.trails,
-        parks: state.entities.parks
+        parks: state.entities.parks,
+        park: park
     }
 
 }
@@ -35,7 +50,8 @@ const mSTP = (state, { match }) => {
 const mDTP = dispatch => ({
     fetchTrail: id => dispatch(fetchTrail(id)),
     fetchPark: id => dispatch(fetchPark(id)),
-    fetchTrails: () => dispatch(fetchTrails())
+    fetchTrails: () => dispatch(fetchTrails()),
+    fetchParks: () => dispatch(fetchParks())
 })
 
 

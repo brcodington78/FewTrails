@@ -5,9 +5,9 @@ import '@brainhubeu/react-carousel/lib/style.css';
 import HomeParkItem from './HomeParkItem'
 
 const HomeTrailList = (props) => {
-    console.log("home props", props)
+    
     let {parks} = props
-
+    console.log('parks', parks)
     if (!parks) {
         return null
     } else {
@@ -18,7 +18,7 @@ const HomeTrailList = (props) => {
                     {
                     resolve: slidesToShowPlugin,
                     options: {
-                    numberOfSlides: 3
+                    numberOfSlides: 4
                     }
                     },
                     {
@@ -36,6 +36,7 @@ const HomeTrailList = (props) => {
                 <HomeParkItem park={props.parks[0]} />
                 <HomeParkItem park={props.parks[1]} />
                 <HomeParkItem park={props.parks[2]} />
+                <HomeParkItem park={props.parks[3]} />
                 
                 
             </Carousel>

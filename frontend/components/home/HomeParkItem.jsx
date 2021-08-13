@@ -24,8 +24,8 @@ const HomeParkItem = (props) => {
                 </Link>
                 <div className='home-trail-item-info'>
                     <h1 className='home-trail-item-name'>{park.name}</h1>
-                    <p>{park.us_state}</p>
-                    <p>{description}</p>
+                    <p className='home-park-info'>{park.us_state}</p>
+                    <p className='home-park-info'>{description}</p>
                     
                 </div>
             </div>

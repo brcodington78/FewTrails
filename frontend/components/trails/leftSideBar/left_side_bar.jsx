@@ -3,7 +3,7 @@ import React from 'react';
 const LeftSideBar = (props) => {
     const {description, length_in_miles, elevation_gain_in_feet, route_type, tags} = props.trail
 
-    console.log('tags', tags)
+    
     return (
         <div> 
             <p className='description'>{description}</p>
@@ -23,7 +23,7 @@ const LeftSideBar = (props) => {
             </ul>
             <div className='tags'>
                 {tags.map((tag, index) => {
-                    console.log(tag)
+                    
                     return(
 
                         <p key={`tag-${index}`} className='tag-text'>{tag}</p>

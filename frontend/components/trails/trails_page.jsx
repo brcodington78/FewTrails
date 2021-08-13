@@ -3,7 +3,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Banner from "./banner";
 import RightSideBar from "./rightSideBar/right_side_bar";
-import LeftSideBar from './leftSideBar/left_side_bar'
+import LeftSideBar from './leftSideBar/left_side_bar';
+import ShowSearchContainer from "../show_search/show_search_container";
 
 
 class TrailsPage extends React.Component {
@@ -24,26 +25,18 @@ class TrailsPage extends React.Component {
     this.props
       .fetchTrails()
       .then(() =>
-        this.props
-          .fetchPark(this.props.trail.park_id)
-          .then((data) => this.setState({park: data.park}))
+        this.props.fetchParks()
+        
       );
     
   }
 
-  // filterTrails = () => {
-  //     console.log('filter being hit')
-  //     this.props.fetchTrails().then((data) => data.filter(trail => {
-  //         trail.park_id === this.state.park.id && !(this.props.trail.name !== trail.name)
-  //     }))
-  // }
 
 
   render() {
-    console.log("render");
-    console.log('trails', this.props.trails)
+    
     const { trail} = this.props;
-    const {park} = this.state;
+    const {park} = this.props;
 
     if (!trail || !park) {
       return <div>Loading</div>;
@@ -52,18 +45,18 @@ class TrailsPage extends React.Component {
         <div className="trail-page-container">
           <div className="banner-top">
             <p className='location-path'>{`United States  >  California  >  ${park.name}  >  ${trail.name}`}</p>
-            {/* <SearchBar /> */}
+            <ShowSearchContainer />
           </div>
           <Banner
             name={trail.name}
             difficulty={trail.difficulty}
             photoUrl={trail.photoUrl}
             parkName={park.name}
+            parkId={park.id}
             coords={trail.coords}
           />
           <div className="sidebar-container">
             <LeftSideBar trail={trail}/>
-            {console.log('right-side-bar', trail, park)}
             <RightSideBar coords={trail.coords} parkId={park.id} parkName={park.name} trails={this.props.trails} pageTrailName={trail.name}/>
           </div>
         </div>

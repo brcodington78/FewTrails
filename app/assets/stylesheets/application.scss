@@ -23,6 +23,8 @@
 @import './parkIndex/carousel.scss';
 @import './parkIndex/parkShowPage.scss';
 @import './home.scss';
+@import './search/home-search.scss';
+@import './search/show-search.scss';
 
 header {
     border-bottom: 1px solid #CCCCCC;
@@ -33,3 +35,34 @@ header {
     background-color: #F2F2F2;
 }
 
+.footer-container {
+    width: 100%;
+    height: 80px;
+    background: coral;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer-developer {
+    font-family: arial;
+    font-weight: 700;
+    font-size: 20px;
+    color: #F2F2F2;
+}
+
+.dev-links {
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.linkedin-svg:hover {
+    fill: #F2F2F2;
+}
+
+.github-svg:hover {
+    fill: #F2F2F2;
+}

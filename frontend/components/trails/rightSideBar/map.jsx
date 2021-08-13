@@ -14,9 +14,12 @@ import {GoogleMap, withScriptjs, withGoogleMap, Marker} from 'react-google-maps'
 
 // const WrappedMap = withScriptjs(withGoogleMap(Map))
 
+
+
 const MyMapComponent = withScriptjs(withGoogleMap((props) =>
   <GoogleMap
     defaultZoom={props.zoom}
+    
     defaultCenter={{ lat: props.coords[0], lng: props.coords[1] }}
   >
     

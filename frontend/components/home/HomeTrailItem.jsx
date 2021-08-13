@@ -28,7 +28,7 @@ const HomeTrailItem = (props) => {
                 <div className='home-trail-item-info'>
                     <h1 className='home-trail-item-name'>{trail.name}</h1>
                     {dif}
-                    <p className='home-trail-item-length'>{`Length: ${trail.length_in_miles}`}</p>
+                    <p className='home-trail-item-length'>{`Length: ${trail.length_in_miles} mi`}</p>
 
                 </div>
             </div>

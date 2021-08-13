@@ -42,7 +42,7 @@ class HomeTrailList extends React.Component {
     
 
     render() {
-        console.log("home props", this.props)
+        
         let {parks} = this.props
         if (!parks) {
             return null
@@ -55,7 +55,7 @@ class HomeTrailList extends React.Component {
                         {
                         resolve: slidesToShowPlugin,
                         options: {
-                        numberOfSlides: 3
+                        numberOfSlides: 4
                         }
                         },
                         {
@@ -73,6 +73,7 @@ class HomeTrailList extends React.Component {
                     <HomeParkItem park={parks[0]} />
                     <HomeParkItem park={parks[1]} />
                     <HomeParkItem park={parks[2]} />
+                    <HomeParkItem park={parks[3]} />
                     
                     
                 </Carousel>

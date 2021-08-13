@@ -1,8 +1,9 @@
 import React from 'react';
-import SearchDropdown from './SearchDropdown';
-import {Link} from 'react-router-dom'
+import ShowSearchDropdown from './ShowSearchDropdown';
+import { useHistory } from "react-router-dom";
+import {Link} from 'react-router-dom';
 
-class Search extends React.Component {
+class ShowSearch extends React.Component {
     constructor(props){
         super(props)
         this.state = {
@@ -24,8 +25,9 @@ class Search extends React.Component {
         let everything = this.props.trails.concat(this.props.parks);
         let result = []
         everything.forEach((item, index) => {
-            
+            console.log('item',item)
             if(item.name.toLowerCase().includes(query)){
+                console.log('pushed item', item)
                 result.push(item)
             }
         })
@@ -35,41 +37,47 @@ class Search extends React.Component {
 
     handleChange(event) {
         
-        console.log('event.target.value', event.target.value)
         this.setState({query: event.target.value}, () => {
             if (this.state.query !== ''){
                 const results = this.filterSearch(this.state.query)
 
-                console.log('searching')
+                
                 this.setState({results})
             } else {
                 this.setState({results: null})
             }
-            console.log('query', this.state.query)
-            console.log('results', this.state.results)
+            
         });
         // console.log('query', this.state.query)
-        console.log('skipping?')
+        
     }
     
     handleSubmit(event) {
-        alert('A search query was submitted: ' + this.state.query);
+
+        // let firstPick = this.state.results[0]
+        // if (firstPick) {
+        //     if (firstPick.park_id) {
+        //         console.log('trail hitting')
+        //         useHistory().push(`/trail/${firstPick.id}`)
+        //     } else {
+        //         history.push(`/park/${firstPick.id}`)
+        //     }
+        // }
+        
+        
+
         event.preventDefault();
     }
 
-
-
     render() {
-        // console.log('search props 2', this.props)
-        console.log('rendering')
         let dropdown;
-        if (this.state.results){
-            dropdown = <SearchDropdown searchList={this.state.results}/>
-        }
-
-        let ele = '/#/';
         if (this.state.results) {
-            console.log('results 1st',this.state.results)
+            dropdown = <ShowSearchDropdown searchList={this.state.results}/>
+        }
+        let ele = null;
+
+        
+        if (this.state.results) {
             let firstPick = this.state.results[0];
             if (firstPick !== undefined) {
                 if(firstPick.park_id){
@@ -82,23 +90,24 @@ class Search extends React.Component {
             }
         }
 
-        
         return (
-            <>
-                <form className='search-form'>
-                    {/* <input className='search-type'></input> */}
-                    <img className='magnifying-glass-pic' src='https://fewtrails-seeds.s3.us-west-1.amazonaws.com/random_assets/magnifying_glass.png'/>
-                    <input className='search-input' placeholder ='Search by park or trail name' value={this.state.query} onChange={(e) => this.handleChange(e)}></input>
-                    <Link to={ele} className='home-search-button'>
-                        <img className='home-search-right-arrow' src='https://fewtrails-seeds.s3.us-west-1.amazonaws.com/random_assets/right-arrow-svgrepo-com.svg'/>
+            <div className='show-search-container'>
+                <form className='show-search-form'>
+                
+                    <input className='show-search-input' placeholder ='Search by park or trail name' value={this.state.query} onChange={(e) => this.handleChange(e)}></input>
+                    {/* <button className='show-search-button' onClick={this.handleSubmit}>
+                        <img className='show-search-right-arrow' src='https://fewtrails-seeds.s3.us-west-1.amazonaws.com/random_assets/right-arrow-svgrepo-com.svg'/>
+                    </button> */}
+                    <Link to={ele} className='show-search-button'>
+                        <img className='show-search-right-arrow' src='https://fewtrails-seeds.s3.us-west-1.amazonaws.com/random_assets/right-arrow-svgrepo-com.svg'/>
                     </Link>
                 </form>
                 {dropdown}
-                
-            </>
+            </div>
         )
-
     }
+
+
 }
 
-export default Search
+export default ShowSearch

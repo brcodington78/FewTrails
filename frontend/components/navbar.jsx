@@ -79,7 +79,7 @@ class Navbar extends React.Component {
             <Link to='/' className='header-bar'>
                 <div className='center-nav'>
                 
-                    <img src='https://i.imgur.com/akcuC2s.png' alt='FewTrails Logo' />
+                    <img src='https://fewtrails-seeds.s3.us-west-1.amazonaws.com/badfavicon+(1).png' alt='FewTrails Logo' />
                 
                 
                 </div>
