@@ -30,9 +30,12 @@ const HomeTrailList = (props) => {
             >
             <HomeTrailItem trail={props.trails[0]} />
             <HomeTrailItem trail={props.trails[1]} />
+            <HomeTrailItem trail={props.trails[13]} />
             <HomeTrailItem trail={props.trails[2]} />
-            <HomeTrailItem trail={props.trails[3]} />
+            <HomeTrailItem trail={props.trails[11]} />
+            <HomeTrailItem trail={props.trails[9]} />
             <HomeTrailItem trail={props.trails[4]} />
+            <HomeTrailItem trail={props.trails[10]} />
             
         </Carousel>
     )
