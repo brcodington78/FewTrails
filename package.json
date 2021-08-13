@@ -24,16 +24,22 @@
     "@babel/core": "^7.14.3",
     "@babel/preset-env": "^7.14.4",
     "@babel/preset-react": "^7.13.13",
+    "@brainhubeu/react-carousel": "^2.0.4",
     "babel-loader": "^8.2.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-fa": "^5.0.0",
+    "react-google-maps": "^9.4.5",
     "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.0",
+    "react-script-tag": "^1.1.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "webpack": "^5.38.1"
   },
   "devDependencies": {
+    "css-loader": "^6.2.0",
+    "style-loader": "^3.2.1",
     "webpack-cli": "^4.7.0"
   }
 }

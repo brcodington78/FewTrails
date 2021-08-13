@@ -1,0 +1,47 @@
+.description {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #414141;
+    line-height: 1.44;
+    border-bottom: 1.5px solid lightgrey;
+}
+
+.tags {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+
+.tag-text {
+    font-size: 14px;
+    cursor: default;
+    margin: 5px 0;
+    display: inline-block;
+    font-weight: 500;
+    background-color: #FFFFFF;
+    color: #428A13;
+    white-space: nowrap;
+    border-radius: 8px;
+    border: solid 1px #428A13;
+    padding: 5.5px 12px;
+    margin-right: 5px;
+}
+
+.stat-list {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 24px;
+}
+
+.stat {
+    font-weight: bold;
+}
+
+.stat-title {
+    font-size: 12px;
+    line-height: 1.42;
+    display: block;
+}
+

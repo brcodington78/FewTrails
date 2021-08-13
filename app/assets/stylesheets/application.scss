@@ -16,3 +16,20 @@
 @import './reset.scss';
 @import './navbar.scss';
 @import './sessionForm';
+@import './trailIndex/banner';
+@import './trailIndex/trail-show.scss';
+@import './trailIndex/trail-list-item';
+@import './trailIndex/left-side-bar';
+@import './parkIndex/carousel.scss';
+@import './parkIndex/parkShowPage.scss';
+@import './home.scss';
+
+header {
+    border-bottom: 1px solid #CCCCCC;
+    background-color: white;
+}
+
+.giant-container {
+    background-color: #F2F2F2;
+}
+

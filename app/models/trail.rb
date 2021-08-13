@@ -3,4 +3,11 @@ class Trail < ApplicationRecord
     validates :name, uniqueness: true
 
     
+    has_one_attached :photo
+
+    belongs_to :park,
+        primary_key: :id,
+        foreign_key: :park_id,
+        class_name: :Park
+
 end
