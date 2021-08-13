@@ -10,7 +10,6 @@ const ParkTrailItem = (props) => {
     }
 
     let {trail} = props
-    console.log('trail', trail)
     return (
         <>
         <Link to={`/trail/${trail.id}`}>

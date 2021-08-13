@@ -19,8 +19,6 @@ class Search extends React.Component {
     }
 
     filterSearch(query) {
-        console.log('trails', this.props.trails)
-        console.log('park', this.props.parks)
         let everything = this.props.trails.concat(this.props.parks);
         let result = []
         everything.forEach((item, index) => {
@@ -35,21 +33,17 @@ class Search extends React.Component {
 
     handleChange(event) {
         
-        console.log('event.target.value', event.target.value)
         this.setState({query: event.target.value}, () => {
             if (this.state.query !== ''){
                 const results = this.filterSearch(this.state.query)
 
-                console.log('searching')
                 this.setState({results})
             } else {
                 this.setState({results: null})
             }
-            console.log('query', this.state.query)
-            console.log('results', this.state.results)
+            
         });
-        // console.log('query', this.state.query)
-        console.log('skipping?')
+
     }
     
     handleSubmit(event) {
@@ -60,8 +54,8 @@ class Search extends React.Component {
 
 
     render() {
-        // console.log('search props 2', this.props)
-        console.log('rendering')
+        
+        
         let dropdown;
         if (this.state.results){
             dropdown = <SearchDropdown searchList={this.state.results}/>
@@ -69,7 +63,7 @@ class Search extends React.Component {
 
         let ele = '/#/';
         if (this.state.results) {
-            console.log('results 1st',this.state.results)
+
             let firstPick = this.state.results[0];
             if (firstPick !== undefined) {
                 if(firstPick.park_id){

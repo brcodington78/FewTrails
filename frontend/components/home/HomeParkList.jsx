@@ -7,7 +7,7 @@ import HomeParkItem from './HomeParkItem'
 const HomeTrailList = (props) => {
     
     let {parks} = props
-    console.log('parks', parks)
+    
     if (!parks) {
         return null
     } else {

@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 
 const SearchDropdown = (props) => {
-    console.log('dropdown console.log', props.searchList)
+    
 
     return (
         <ul className='search-dropdown-list'>
