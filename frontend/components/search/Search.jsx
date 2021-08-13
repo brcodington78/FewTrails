@@ -24,9 +24,8 @@ class Search extends React.Component {
         let everything = this.props.trails.concat(this.props.parks);
         let result = []
         everything.forEach((item, index) => {
-            console.log('item',item)
+            
             if(item.name.toLowerCase().includes(query)){
-                console.log('pushed item', item)
                 result.push(item)
             }
         })
@@ -70,12 +69,16 @@ class Search extends React.Component {
 
         let ele = '/#/';
         if (this.state.results) {
+            console.log('results 1st',this.state.results)
             let firstPick = this.state.results[0];
-            if (firstPick.park_id) {
+            if (firstPick !== undefined) {
+                if(firstPick.park_id){
+                    
+                    ele = `/trail/${firstPick.id}`
+                } else {
+                    ele = `/park/${firstPick.id}`
+                }
                 
-                ele = `/trail/${firstPick.id}`
-            } else {
-                ele = `/park/${firstPick.id}`
             }
         }
 

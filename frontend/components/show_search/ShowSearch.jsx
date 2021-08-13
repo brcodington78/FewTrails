@@ -79,11 +79,14 @@ class ShowSearch extends React.Component {
         
         if (this.state.results) {
             let firstPick = this.state.results[0];
-            if (firstPick.park_id) {
+            if (firstPick !== undefined) {
+                if(firstPick.park_id){
+                    
+                    ele = `/trail/${firstPick.id}`
+                } else {
+                    ele = `/park/${firstPick.id}`
+                }
                 
-                ele = `/trail/${firstPick.id}`
-            } else {
-                ele = `/park/${firstPick.id}`
             }
         }
 
