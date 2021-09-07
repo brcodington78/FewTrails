@@ -10,7 +10,7 @@
   },
   "engines": {
     "node": "10.13.0",
-    "npm": "7.19.1"
+    "npm": "7.19.14"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
