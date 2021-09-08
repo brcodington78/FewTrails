@@ -1,7 +1,12 @@
 const path = require("path");
+const webpack = require('webpack')
 
 module.exports = {
     entry: "./frontend/entry.jsx",
+    plugins: [new webpack.DefinePlugin({ 'process.env': {
+        GOOGLE_API_KEY: JSON.stringify('AIzaSyAcPEQaM7XDDOB0OtvIwYWCBIuIHH9tXVQ')
+      }
+      })],
     output: {
         path: path.resolve(__dirname, "app", "assets", "javascripts"
         ),

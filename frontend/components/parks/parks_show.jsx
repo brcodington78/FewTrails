@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import MyMapComponent from '../trails/rightSideBar/map'
 import {GoogleMap, withScriptjs, withGoogleMap} from 'react-google-maps'
-import { googleAPIKey } from '../../keys/keys'
+// import { googleAPIKey } from '../../keys/keys'
 import Carousel2 from './carousel2'
 import ParkTrailList from './ParkTrailList'
 import ShowSearchContainer from '../show_search/show_search_container'
@@ -81,7 +81,7 @@ class ParkShowPage extends React.Component {
                         <p className='park-description'>{park.description1}</p>
                         <MyMapComponent
                             isMarkerShown={true}
-                            googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${googleAPIKey}`}
+                            googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.GOOGLE_API_KEY}`}
                             loadingElement={<div style={{ height: `100%` }} />}
                             containerElement={<div style={{ height: `400px` }} />}
                             mapElement={<div style={{ height: `100%` }} />}
