@@ -37,19 +37,19 @@ king_range = Park.create!(
 )
 
 king1 = URI.open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/king_range/king_range1.jpg')
-king_range.photos.attach(io: king1, filename: 'king_range1')
+king_range.photos.attach(io: king1, filename: 'king_range1.jpg')
 
 king2 = URI.open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/king_range/king_range2.jpg')
-king_range.photos.attach(io: king2, filename: 'king_range2')
+king_range.photos.attach(io: king2, filename: 'king_range2.jpg')
 
 king3 = URI.open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/king_range/king_range3.jpg')
-king_range.photos.attach(io: king3, filename: 'king_range3')
+king_range.photos.attach(io: king3, filename: 'king_range3.jpg')
 
 king4 = URI.open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/king_range/king_range4.jpg')
-king_range.photos.attach(io: king4, filename: 'king_range4')
+king_range.photos.attach(io: king4, filename: 'king_range4.jpg')
 
 king5 = URI.open('https://fewtrails-seeds.s3.us-west-1.amazonaws.com/king_range/king_range5.jpg')
-king_range.photos.attach(io: king5, filename: 'king_range5')
+king_range.photos.attach(io: king5, filename: 'king_range5.jpg')
 
 
 LCT_MTBSB = Trail.create!(
