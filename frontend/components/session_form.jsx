@@ -26,7 +26,7 @@ class SessionForm extends React.Component {
     demoUser() {
         
         let demoUser = { email: "jdoe@yahoo.com", password: "123456" };
-        this.props.processForm(demoUser)
+        this.props.login(demoUser)
     }
 
     demoSignUpUser() {
@@ -67,7 +67,7 @@ class SessionForm extends React.Component {
                 <Link className='form-link' to="/login">Already have an acount? Log in</Link>
             )
             demoButton = (
-                <button onClick={this.demoSignUpUser}>Demo Sign Up</button>
+                <button onClick={this.demoUser}>Demo Sign Up</button>
             )
         } else if (this.props.formType === 'login') {
             formHeader = (
